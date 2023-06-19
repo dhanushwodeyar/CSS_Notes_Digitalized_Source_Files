@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Align_Form_Elements</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+           
+        }
+        .heading{
+            font-size: 60px;
+            text-align: center;
+            margin:20px;
+            color: greenyellow;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        hr{
+            height: 5px;
+            margin:20px 10px;
+            border-radius: 20px;
+            background-color: greenyellow;
+        }
+        .wrap{
+            background-color: gainsboro;
+            padding:30px;
+            list-style: none;
+            width:60%;
+            justify-content:center ;
+           
+        }
+        form{
+            display: flex;
+            width:100%;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .wrap li{
+            
+         display: flex;
+         padding:10px 0;
+         justify-content:end ;
+        }
+        .wrap li label{
+            flex:1;
+            font-size: 20px;
+        }
+          .wrap li input:not(input[type="submit"]){
+            flex:4;
+            height: 30px;
+            outline-color: blue;
+        }
+        input[type="submit"]{
+            padding:10px;
+           background-color: rgb(206, 206, 206);
+            border:1px solid gray;
+            width: 150px;
+            border-radius: 5px;
+            box-shadow: 2px 2px 4px 0px black;
+
+        }
+        select{
+            flex:4;
+            height:30px;
+            
+        }
+        @media screen and (max-width:450px) {
+          .heading{
+            font-size: 50px;
+           }
+        }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">Align_Form_Elements</h1>
+    <hr />
+    <form action="">
+      <ul class="wrap">
+        <li>
+          <label for="t1">First Name :</label>
+          <input type="text" />
+        </li>
+        <li>
+          <label for="t1">Last Name :</label>
+          <input type="text" />
+        </li>
+        <li>
+          <label for="t1">Email :</label>
+          <input type="text" />
+        </li>
+        <li>
+            <label for="">country</label>
+            <select name="country" id="">
+                <option value="India">India</option>
+                <option value="America">America</option>
+                <option value="China">China</option>
+                <option value="malasia">malasia</option>
+                 <option value="SriLanka">SriLanka</option>
+                <option value="England">England</option>
+                <option value="France">France</option>
+                <option value="Nepal">Nepal</option>
+            </select>
+        </li>
+        <li><input type="submit"></li>
+      </ul>
+    </form>
+                <Section class="navigatebtn">
+      <a href="59.CSS_Flex-Shrink_Property.html" class="previousbtn">Previous </a>
+      <a href="61.Creation of Sample Responsive website.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

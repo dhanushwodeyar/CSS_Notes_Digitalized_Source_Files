@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_Pseudo-Classes_Property</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+      }
+      body .heading {
+        font-size: 50px;
+        text-transform: uppercase;
+        width: calc(220px * 4);
+        margin: 20px auto;
+        color: #ffffff;
+      }
+      hr {
+        width: 100hw;
+        height: 5px;
+        background-color: blueviolet;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      section div {
+        width: 190px;
+        height: 190px;
+        border: 2px solid #fff;
+        float: left;
+        margin: 12px;
+        box-sizing: border-box;
+      }
+      div:first-child {
+        background-image: url(../imgs/b1.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+      }
+      div:last-child {
+        background-image: url(../imgs/b2.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+      }
+      div:nth-child(7n) {
+        background-image: url(../imgs/b3.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+      }
+      div:nth-last-child(8n) {
+        background-image: url(../imgs/b4.jpg);
+        background-size: cover;
+        background-position: center;
+        object-fit: cover;
+      }
+      div:nth-of-type(3) {
+        background-image: url(../imgs/b4.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:nth-last-of-type(3) {
+        background-image: url(../imgs/b5.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:nth-child(4n):not([name="11"]) {
+        background-image: url(../imgs/b6.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:nth-child(10) {
+        background-image: url(../imgs/b7.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:first-of-type {
+        border: 2px solid crimson;
+      }
+      div:last-of-type {
+        border: 2px solid rgb(85, 255, 85);
+      }
+      div:empty:not([name]) {
+        background-image: url(../imgs/b12.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:nth-last-child(2) {
+        background-image: url(../imgs/b8.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:nth-last-child(4) {
+        background-image: url(../imgs/b9.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div:nth-last-child(11) {
+        background-image: url(../imgs/b10.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+      }
+      div[class="form"] {
+        box-sizing: border-box;
+        height: 500px;
+        width: 100hw;
+        border: 2px solid #fff;
+        background-image: none !important;
+        background-color: aquamarine;
+        margin: 20px;
+        position:relative;
+      }
+      section {
+        box-sizing: border-box;
+        height: 430px;
+        border: 2px solid #fff;
+        width: 100hw;
+        margin: 20px;
+      }
+      section div:nth-child(1) {
+               margin-left: 20px;
+        
+      }
+      section div:nth-child(7) {
+        margin-left: 20px;
+      }
+      form{
+        width:510px;
+        height: 55%;
+        border:2px solid rebeccapurple;
+        border-radius: 5px;
+        margin: 100px auto;
+        background-color: antiquewhite;
+        box-shadow: 4px 3px 3px 2px rgb(112, 112, 112);
+        padding:20px;
+        box-sizing: border-box;
+      }
+      form input:not([type="radio"]):not([type="checkbox"])
+      {
+        height: 35px;
+        width: 210px;
+        display: inline;
+        margin:10px;
+
+      }
+
+      form input[type="button"]{
+        background-color: rgb(47, 61, 255);
+        color:#fff;
+        font-size: 20px;
+        cursor:pointer;
+        border:none;
+
+      }
+      label{
+        margin:80px 15px!important;
+        
+      }
+      form input[type="button"]{
+        margin:30px;
+      }
+      form input:active{
+        background-color:red;
+      }
+      form input:focus{
+        outline:2px solid rgb(0, 89, 255);
+       
+      }
+      input:checked{
+        width:30px;
+        height: 30px;
+      }
+      input:disabled{
+        background-color:rgb(226, 141, 148);
+      }
+      input:enabled{
+        background-color: rgb(201, 255, 120);
+      }
+      input:required{
+        background-color: rgb(88, 255, 66);
+      }
+      input:optional{
+        border:2px solid rgb(0, 255, 255);
+      }
+      input[type=number]:in-range{
+        border:2px solid rgb(30, 255, 0);
+      }
+            input[type=number]:out-of-range{
+        border:2px solid rgb(255, 0, 0);
+      }
+      input:read-only{
+          border:2px double #ffee00;
+      }
+        input:read-write{
+          border:2px double #1900ff;
+      }
+      input:invalid{
+        box-shadow: 3px 3px 3px 2px rgb(255, 0, 149);
+      }
+      input:valid{
+        box-shadow: 3px 3px 3px 2px rgb(0, 255, 115);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">CSS_Pseudo-Classes_Property</h1>
+    <hr />
+    <section>
+      <div name="1"></div>
+      <div name="2"></div>
+      <div name="3"></div>
+      <div name="4"></div>
+      <div name="5"></div>
+      <div></div>
+      <div name="6"></div>
+      <div name="7"></div>
+      <div name="8"></div>
+      <div name="9"></div>
+      <div name="10"></div>
+      <div name="11"></div>
+    </section>
+    <div class="form">
+      <form action="#" method="post">
+        <input placeholder="First Name" readonly type="text">
+        <input placeholder="Last Name" type="text">
+        <input placeholder="Email" required type="email">
+        <input placeholder="Phone Number" disabled type="number">
+        <input placeholder="Age" min="10" max="20" type="number" >
+        <input placeholder="Date of birth" type="date">
+        <label placeholder="" for="">Male<input type="radio" name="gender"></label>
+         <label for="" >Female<input type="radio" name="gender"></label>
+         <label placeholder="" for="">Male<input type="checkbox"></label>
+         <label for="">Female<input checked type="checkbox"></label>
+        <input type="button"  value="CLICK HERE">
+      </form>
+    </div>
+            <Section class="navigatebtn">
+      <a href="28.CSS_Atrribute_Advance_Selector_property.html" class="previousbtn">Previous </a>
+      <a href="30.CSS_Pseudo_Elements_Properties.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

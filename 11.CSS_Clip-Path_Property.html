@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Clip-Path_Property</title>
+    <style>
+         body{
+            background-color: black;
+            box-sizing: border-box;
+            color:#ffffff   
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:calc(200px*5);
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        div{
+            border:2px solid white;
+            width:calc(100%/4.4);
+            height:400px;
+            margin:10px 10px;
+            float:left;
+            
+        }
+        img{
+            width:100%;
+            height:100%;
+        }
+        h2{
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 500;
+            font-size: 20px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .box1 img{
+            clip-path: circle(40% at 50% 40%);
+        }
+        .box2 img{
+            clip-path: circle(60% at 100% 50%);
+        }
+        .box3 img{
+            clip-path: circle(60% at 7% 50%);
+        }
+        .box4 img{
+            clip-path: circle(60% at 7% 5%);
+        }
+        .box5 img{
+            clip-path:ellipse(25% 50%  at 50% 50%);
+        }
+        .box6 img{
+            clip-path:ellipse(50% 20%  at 50% 40%);
+        }
+        .box7 img{
+            clip-path:ellipse(30% 30%  at 70% 50%);
+        }
+        .box8 img{
+            clip-path:ellipse(70% 30%  at 40% 70%);
+        }
+        .box9 img{
+            clip-path: inset(10px 50px 70px 60px);
+        }
+        .box10 img{
+            clip-path: inset(10px 50px 150px 50px);
+        }
+        .box11 img{
+            clip-path: inset(40px 90px 150px 10px);
+        }
+        .box12 img{
+            clip-path: inset(100px 10px 100px 10px);
+        }
+        .box13 img{
+            clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+        }
+        .box14 img{
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        }
+        .box15 img{
+            clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+        }
+        .box16 img{
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Clip-Path_Property</h1>
+    <hr>
+    <h2>Circle value</h2>
+    <div class="box1"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <div class="box2"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <div class="box3"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <div class="box4"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <h2>Ellipse value</h2>
+    <div class="box5"><img src="../imgs/stem-list-_KRzc5cKud4-unsplash.jpg" alt="circle"></div>
+    <div class="box6"><img src="../imgs/stem-list-_KRzc5cKud4-unsplash.jpg" alt="circle"></div>
+    <div class="box7"><img src="../imgs/stem-list-_KRzc5cKud4-unsplash.jpg" alt="circle"></div>
+    <div class="box8"><img src="../imgs/stem-list-_KRzc5cKud4-unsplash.jpg" alt="circle"></div>
+    <h2>inset value</h2>
+    <div class="box9"><img src="../imgs/b10.jpg" alt="circle"></div>
+    <div class="box10"><img src="../imgs/b10.jpg" alt="circle"></div>
+    <div class="box11"><img src="../imgs/b10.jpg" alt="circle"></div>
+    <div class="box12"><img src="../imgs/b10.jpg" alt="circle"></div>
+    <h2>Polygon value</h2>
+    <div class="box13"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <div class="box14"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <div class="box15"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+    <div class="box16"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="circle"></div>
+            <Section class="navigatebtn">
+      <a href="10.CSS_Calc( )_Property.html" class="previousbtn">Previous </a>
+      <a href="12.CSS_Shape-Outside_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

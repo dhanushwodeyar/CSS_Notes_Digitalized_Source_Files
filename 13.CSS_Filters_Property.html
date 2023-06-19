@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_Filters_Property</title>
+    <style>
+      body {
+        background-color: black;
+        box-sizing: border-box;
+        color: #ffffff;
+      }
+      body .heading {
+        font-size: 70px;
+        text-transform: uppercase;
+        width: calc(200px * 5);
+        margin: 20px auto;
+        color: #ffffff;
+      }
+      hr {
+        width: 100%;
+        height: 5px;
+        background-color: blueviolet;
+        border-radius: 30px;
+      }
+      div {
+        width: 80%;
+        height: 470px;
+        border: 2px solid white;
+        margin: 40px auto;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        float: left;
+      }
+      .box1 img {
+        filter: none;
+      }
+      .box2 img {
+        filter: blur(7px);
+      }
+      .box3 img {
+        filter: brightness(190%);
+      }
+      .box4 img {
+        filter: contrast(50%);
+      }
+      .box5 img {
+        filter: drop-shadow(10px 10px 5px red);
+      }
+      .box6 img {
+        filter: grayscale(100%);
+      }
+      .box7 img {
+        filter: hue-rotate(90deg);
+      }
+      .box8 img {
+        filter: invert(90%);
+      }
+      .box9 img {
+        filter: opacity(20%);
+      }
+      .box10 img {
+        filter: saturate(10%);
+      }
+      .box11 img {
+        filter: sepia(80%);
+      }
+      p {
+        font-size: 50px;
+        font-weight: 300;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">CSS_Filters_Property</h1>
+    <hr />
+    <p>none</p>
+    <div class="box1">
+      <img src="../imgs/king-lip-S9uB_IlDThw-unsplash.jpg" alt="" />
+    </div>
+    <p>blur()</p>
+    <div class="box2">
+      <img src="../imgs/mulyadi-je229dO2TFE-unsplash.jpg" alt="" />
+    </div>
+    <p>brigtness()</p>
+    <div class="box3">
+      <img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="" />
+    </div>
+    <p>contrast()</p>
+    <div class="box4">
+      <img src="../imgs/mulyadi-MO7HNbW1Mew-unsplash.jpg" alt="" />
+    </div>
+    <p>drop-shadow()</p>
+    <div class="box5">
+      <img src="../imgs/pexels-fauxels-3183132.jpg" alt="" />
+    </div>
+    <p>grayscale()</p>
+    <div class="box6">
+      <img src="../imgs/mulyadi-MO7HNbW1Mew-unsplash.jpg" alt="" />
+    </div>
+    <p>hue-rotate()</p>
+    <div class="box7">
+      <img src="../imgs/stem-list-_KRzc5cKud4-unsplash.jpg" alt="" />
+    </div>
+    <p>invert()</p>
+    <div class="box8">
+      <img src="../imgs/b11.jpg" alt="" />
+    </div>
+    <p>opacity()</p>
+    <div class="box9">
+      <img src="../imgs/pexels-fauxels-3183132.jpg" alt="" />
+    </div>
+    <p>saturate()</p>
+    <div class="box10">
+      <img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="" />
+    </div>
+    <p>sepia</p>
+    <div class="box11">
+      <img src="../imgs/king-lip-S9uB_IlDThw-unsplash.jpg" alt="" />
+    </div>
+            <Section class="navigatebtn">
+      <a href="12.CSS_Shape-Outside_Property.html" class="previousbtn">Previous </a>
+      <a href="14.CSS_Transition_property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

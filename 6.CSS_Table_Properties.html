@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Table_Properties</title>
+    <style>
+        body{
+            background-color:rgb(36, 101, 199);
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:900px;
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        table{
+            width:400px;
+            margin:50px auto;
+            color:#fff
+            /* border-spacing: 20px 30px;
+            border-collapse:collapse; */
+            /* /* empty-cells: hide; */
+            /* caption-side: bottom; */
+            /* table-layout: auto; */
+        }
+
+        /* td{
+            width:500px;
+            vertical-align:top;
+
+        } */
+        tr:nth-child(even):hover{
+            background-color: darkcyan;
+            color:#ffffff;
+        }
+        tr:nth-child(odd):hover{
+            background-color: rgb(9, 0, 139);
+            color:#ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Table_Properties</h1>
+    <hr>
+    <table border="1">
+        <caption>Dhanush</caption>
+        <tr>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Dhanush lo </td>
+            <td>MCA</td>
+            <td>23</td>
+        </tr>
+        <tr>
+            <td>Sangeetha </td>
+            <td>MCA</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>Dinesh</td>
+            <td>BCA</td>
+            <td>21</td>
+        </tr>
+        <tr>
+            <td>Jannu</td>
+            <td>MBBS</td>
+            <td>18</td>
+        </tr>
+        <tr>
+            <td>Karna</td>
+            <td>M.TECH</td>
+            <td>16</td>
+        </tr>
+    </table>
+        <div class="navigatebtn">
+      <a href="5. @Media_Query.html" class="previousbtn">Previous </a>
+      <a href="7.CSS_Resize_Property.html" class="nextbtn">Next </a>
+    </div>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

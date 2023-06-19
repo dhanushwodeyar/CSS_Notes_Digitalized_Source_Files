@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding:0%;
+            margin:0%;
+            box-sizing: border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        #Container{
+            width:100%;
+            height:100%;
+        }
+        #header{
+            padding:40px 10px;
+            background-color: rgb(9, 172, 9);
+            font-size: 40px;
+            color: aliceblue;
+            text-align: center;
+        }
+        #menue{
+
+            background-color: yellow;
+            min-width:100%;
+            height:70px;
+        }
+        #menue ul{
+            float:left;
+        }
+        #menue ul li{
+            display:inline-block;
+           margin:25px 20px;
+
+
+        }
+        #menue ul li a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color:darkslategrey
+            
+        }
+        #content{
+            float:left;
+            background-color: coral;
+            width:80%;
+            min-height:400px;
+        }
+        #content h2{
+            font-size: 30px;
+            margin:20px 0px 30px 10px
+        }
+        #content p{
+            width:1000px;
+            margin-top:20px;
+            color:azure;
+            font-size: 18px;
+            font-weight: 200;
+            text-align:start;
+            margin-left:30px
+        }
+        #sidebar{
+            float:left;
+            width:20%;
+            min-height:400px;
+            background-color:aqua;
+        }
+        #sidebar ul li{
+            list-style: none;
+            margin:20px;
+        }
+        #sidebar ul li a{
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 500;
+            color:brown
+        }
+        #footer{
+            clear:both;
+            background-color: darksalmon;
+            width:100%;
+            height:60px;
+            text-align: center;
+            padding-top:20px;
+        }
+        #footer h3 a{
+            text-decoration: none;
+            color: blueviolet;
+        }
+        #footer h3 a:visited{
+            color:yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <div id="header">
+            <h1>Dhanush Wodeyar</h1>
+        </div>
+        <div id="menue">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            <h2>Some Content</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis officia repudiandae consequatur, dolor vero modi nihil blanditiis maxime esse et. Doloremque aliquam illum et, vero debitis eius maiores. Accusantium, praesentium!Loremlorem
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis officia repudiandae consequatur, dolor vero modi nihil blanditiis maxime esse et. Doloremque aliquam illum et, vero debitis eius maiores. Accusantium, praesentium!Loremlorem
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis officia repudiandae consequatur, dolor vero modi nihil blanditiis maxime esse et. Doloremque aliquam illum et, vero debitis eius maiores. Accusantium, praesentium!Loremlorem
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, perferendis dignissimos a aperiam ducimus placeat ab temporibus molestiae ex vel sapiente! Consectetur veniam, ea sequi minima dolore molestiae nemo voluptatum. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente velit tempora quidem. Culpa quibusdam eligendi non autem ratione dignissimos ipsum aperiam sint distinctio aliquid perspiciatis asperiores, vel consequatur omnis dolore.</p>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+        <div id="footer">
+            <h3><a href="www.google.com">Dhanush wodeyar @ al the copy rights are owned</a> </h3>
+        </div>
+    </div>
+        <div class="navigatebtn">
+      <a href="1 .demo.html" class="previousbtn">Previous </a>
+      <a href="3. CSS_Position.html" class="nextbtn">Next </a>
+    </div>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

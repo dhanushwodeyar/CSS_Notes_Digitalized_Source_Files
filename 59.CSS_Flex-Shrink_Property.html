@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Flex-Shrink_Property</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        .heading{
+            color:#fff;
+            text-align: center;
+            font-size: 60px;
+            margin:20px;
+        }
+        hr{
+            height: 5px;
+            background-color:aqua;
+            border-radius: 20px;
+            margin:20px 10px;
+        }
+        .flex{
+            border:2px solid #fff;
+            width: 60%;
+            height:60px;
+            display: flex;
+            margin:20px auto;
+            color:#fff;
+            flex-wrap: wrap;
+        }
+        .items{
+            /* flex-grow: 1; */
+            text-align: center;
+            flex-shrink: 0;
+            flex-basis:100px;
+              
+        }
+        .items1{
+            border:1px solid #fff;
+            margin:5px;
+            padding:10px;
+            background-color: aqua;
+            flex-basis: 200px;
+            flex-shrink: 0;
+        }
+        .items2{
+            border:1px solid #fff;
+            margin:5px;
+            padding:10px;
+            background-color: rgb(0, 255, 34);
+        }
+        .items3{
+            border:1px solid #fff;
+            margin:5px;
+            padding:10px;
+            
+            background-color: rgb(255, 0, 242);
+        }
+         .items4{
+            border:1px solid #fff;
+            margin:5px;
+            padding:10px;
+            background-color: rgb(255, 174, 0);
+        }
+         .items5{
+            border:1px solid #fff;
+            margin:5px;
+            padding:10px;
+            background-color: rgb(0, 119, 255);
+        }
+        .items6{
+            border:1px solid #fff;
+            margin:5px;
+            padding:10px;
+            background-color: rgb(255, 0, 0);
+        }
+        
+    </style>
+</head>
+<body>
+    <h1 class="heading">
+       CSS_Flex-Shrink_Property
+    </h1>
+    <hr>
+    <div class="flex">
+    <div class="items items1">First</div>
+    <div class="items items2">Second</div>
+    <div class="items items3">Third</div>
+    <div class="items items4">Fouth</div>
+    <div class="items items5">Fifth</div>
+    <div class="items items6">Sixth</div>
+    </div>
+                <Section class="navigatebtn">
+      <a href="58.CSS_Flex-Basis_Property.html" class="previousbtn">Previous </a>
+      <a href="60.Align_Form Elements.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

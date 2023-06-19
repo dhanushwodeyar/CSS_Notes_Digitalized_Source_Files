@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <title>CSS_Scroll_Snapping</title>
+    <style>
+      /* @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"; */
+      * {
+        padding: 0%;
+        margin: 0%;
+        box-sizing: border-box;
+      }
+      html{
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+      }
+      body {
+        display: flex;
+        flex-direction: column;
+      }
+      .heading {
+        width: 100%;
+        text-align: center;
+        background-color: rgb(26, 105, 253);
+        color: aliceblue;
+        padding: 10px;
+      }
+      .nav {
+        position: sticky;
+        top:0%;
+        height: 60px;
+        width: 100%;
+        background-color: #ffffff;
+        position: relative;
+      }
+      .nav .nav-header {
+        display: inline;
+      }
+      .nav > .nav-header > .logo {
+        display: inline-block;
+        font-size: 26px;
+        padding: 15px;
+        color: rgba(255, 0, 43, 0.855);
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+      .nav > .nav-btn {
+        display: none;
+      }
+      .nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+      }
+      .nav > .nav-links > a {
+        display: inline-block;
+        text-decoration: none;
+        font-weight: 400;
+        padding: 20px 10px;
+        color:rgba(255, 0, 43, 0.855);
+      }
+      .nav > .nav-links > a:hover {
+        color:#ffffff;
+        background-color: rgba(255, 0, 43, 0.855);
+      }
+      .nav #nav-check {
+        display: none;
+      }
+      
+      #home {
+        scroll-snap-align: end;
+        display: flex;
+        width: 100%;
+        height: 630px;
+        background-image: url(../imgs/office\ Desk.jpg);
+        background-size: cover;
+        overflow: hidden;
+        user-select: none;
+      }
+      #home .over-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255, 0, 43, 0.855);
+        padding: 20px;
+      }
+      #home .over-container .content {
+        display: flex;
+        width: 48%;
+        /* border:2px solid #fff; */
+        justify-content: space-between;
+      }
+      .com {
+        margin: 200px 0px 0px 100px;
+      }
+
+      .com .Cname {
+        margin-bottom: 20px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 30px;
+        color: #fff;
+      }
+      .com .Cdisc {
+        width: 500px;
+        font-size: 20px;
+        color: #fff;
+        margin-bottom: 60px;
+      }
+      .com .Cbtn a {
+        font-size: 14px;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-color: #fff;
+        padding: 10px 30px;
+        margin-right: 20px;
+        text-decoration: none;
+        border: 2px solid #fff;
+        color: rgb(255, 0, 43);
+      }
+      .com .Cbtn a:hover {
+        background-color: transparent;
+        color: #fff;
+      }
+      .hero {
+        display: flex;
+        width: 100%;
+        /* border:2px solid yellow; */
+        justify-content: center;
+      }
+      .hero img {
+        width: 500px;
+        height: 650px;
+      }
+      #services {
+        user-select: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: max-content;
+        background-color: rgb(255, 255, 255);
+        padding: 30px;
+        justify-content: center;
+        margin: 60px 0px 30px 0px;
+        scroll-snap-align: center;
+      }
+      #services .myservice {
+        text-align: center;
+        width: 960px;
+        margin-bottom: 30px;
+      }
+      #services .myservice h1 {
+        font-size: 35px;
+        color: rgba(255, 0, 43, 0.855);
+        font-family: sans-serif;
+      }
+      #services .myservice p {
+        padding: 10px;
+        font-size: 20px;
+        color: #616161;
+      }
+      .CService {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        justify-content: space-around;
+      }
+      .ServiceBox {
+        padding: 20px;
+        flex-basis: 370px;
+        height: 310px;
+        box-shadow: 0 3px 15px rgba(255, 0, 68, 0.2);
+        background-color: rgb(249, 244, 238);
+        margin-bottom: 30px;
+        border-radius: 10px;
+        transition: all 1s;
+      }
+      .servelogo {
+        display: flex;
+        justify-content: center;
+        margin: 25px 0px;
+      }
+      .servelogo {
+        font-size: 75px;
+        color: rgba(255, 0, 43, 0.855);
+      }
+      .servename {
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .servedisc {
+        text-align: center;
+        margin: 0px 20px;
+      }
+      .ServiceBox:hover .servelogo {
+        color: #ffffff !important;
+      }
+      .ServiceBox:hover {
+        background-color: rgba(255, 0, 43, 0.855);
+        color: #ffffff !important;
+        transform: translateY(-20px);
+      }
+      #about {
+        user-select: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: max-content;
+        /* padding: 30px; */
+        align-items: center;
+        margin: -20px 0px 30px 0px;
+            scroll-snap-align: start;
+      }
+      .aboutus {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 960px;
+        margin: 10px 10px 10px 10px;
+        padding: 20px;
+      }
+      .aboutus .aboutname {
+        text-align: center;
+        font-size: 20px;
+        color: rgba(255, 0, 43, 0.855);
+        font-family: sans-serif;
+      }
+      .aboutus .aboutdisc p {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px 0px 0px 0px;
+        font-size: 20px;
+        color: #929292;
+      }
+      .aboutcontainer {
+        display: flex;
+        padding: 20px 20px 0px 20px;
+        width: 90%;
+        justify-content: center;
+      }
+      .aboutcontainer .aboutimg {
+        max-width: 1000px;
+        background-color: #ffffff;
+        padding: 30px;
+        clip-path: circle(40% at 50% 50%);
+      }
+      .aboutcontainer .aboutimg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .con {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        /* border:2px solid yellow; */
+        margin: 20px 0px 0px 25px;
+        max-width: 900px;
+      }
+      .personename {
+        margin-bottom: 20px;
+        color: #ffffff;
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      .con .aboutdisc p {
+        padding: 10px 10px 10px 10px;
+        font-size: 18px;
+        color: #ffeeee;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(255, 0, 43, 0.855);
+        flex-wrap: wrap;
+      }
+      #contactus {
+        display: flex;
+        width: 100%;
+        height: max-content;
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+        margin: 40px 0px;
+            scroll-snap-align: end;
+      }
+      .formcontainer {
+        display: flex;
+        width: 95%;
+        height: 100%;
+        flex-wrap: wrap;
+        /* padding: 10px; */
+        justify-content: center;
+      }
+      .formimg {
+        border-top: 1px solid rgba(255, 166, 181, 0.855);
+        border-left: 1px solid rgba(255, 166, 181, 0.855);
+        border-bottom: 1px solid rgba(255, 166, 181, 0.855);
+        display: flex;
+        flex-basis: 38%;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 0, 43, 0.855);
+        padding: 10px;
+      }
+      .formimg h1 {
+        color: #fff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin-bottom: 20px;
+      }
+      .formimg iframe {
+        border: 2px solid #fff;
+      }
+      .socialicon {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: center;
+        width: 94%;
+      }
+      .socialicon .icon {
+        display: flex;
+        width: 45px;
+        height: 45px;
+        border: 2px solid #fff;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+        background-color: #ffffff;
+        border-radius: 5px;
+      }
+      .socialicon .icon:hover i {
+        color: #ffffff;
+      }
+      .socialicon .icon:hover {
+        background-color: transparent;
+      }
+      .socialicon i {
+        color: rgba(255, 0, 43, 0.855);
+        margin: 10px;
+        font-size: 20px;
+      }
+      .myform {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-basis: 58%;
+        padding: 20px;
+        background-color: rgb(255, 243, 229);
+        border-top: 1px solid rgba(255, 166, 181, 0.855);
+        border-right: 1px solid rgba(255, 166, 181, 0.855);
+        border-bottom: 1px solid rgba(255, 166, 181, 0.855);
+      }
+      .myform form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .myform form input:not([type="button"]) {
+        width: 95%;
+        height: 35px;
+        border-radius: 4px;
+        border: none;
+        outline: 1px solid rgba(255, 166, 181, 0.855);
+      }
+      .myform form textarea {
+        width: 95%;
+        border-radius: 4px;
+        border: none;
+        outline: 1px solid rgba(255, 166, 181, 0.855);
+      }
+      .myform form input:not([type="button"]):focus {
+        outline: 2px solid rgba(255, 0, 43, 0.855);
+      }
+      .myform form textarea:focus {
+        outline: 2px solid rgba(255, 0, 43, 0.855);
+      }
+      .myform form input[type="button"] {
+        width: 130px;
+        height: 35px;
+        font-size: 16px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        background-color: rgba(255, 0, 43, 0.855);
+        border-color: rgba(255, 166, 181, 0.855);
+      }
+      .myform form input[type="button"]:hover {
+        background: transparent;
+        color: rgba(255, 0, 43, 0.855);
+        border-color: rgba(255, 0, 43, 0.855);
+      }
+      .myform input {
+        margin: 10px;
+      }
+      .myform textarea {
+        margin: 10px;
+      }
+      input::placeholder {
+        font-size: 16px;
+        text-indent: 6px;
+      }
+      textarea::placeholder {
+        font-size: 18px;
+        text-indent: 6px;
+      }
+      .contactheader {
+        text-align: center;
+        max-width: 1000px;
+        margin: 30px 0px 30px 0px;
+      }
+      .contactheader h1 {
+        font-size: 35px;
+        color: rgba(255, 0, 43, 0.855);
+        font-family: sans-serif;
+      }
+      .contactheader p {
+        padding: 10px;
+        font-size: 20px;
+        color: #616161;
+      }
+      .formhead {
+        text-align: center;
+        color: rgba(255, 0, 43, 0.855);
+        font-family: sans-serif;
+        margin-bottom: 30px;
+      }
+      #news {
+            scroll-snap-align: center;
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: rgb(255, 243, 229);
+        margin: 60px 0px;
+      }
+      .newsheader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .newsheader h1 {
+        color: rgba(255, 0, 43, 0.855);
+        font-family: sans-serif;
+      }
+      .newsheader p {
+        padding: 10px;
+        font-size: 20px;
+        color: #616161;
+      }
+      .newsletter {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+      }
+      .newsletter form input[type="text"] {
+        height: 33px;
+        flex-basis: 80%;
+        margin-right: 0px;
+        border: none;
+        border-radius: 20px 0px 0px 20px;
+        outline: 1px solid rgba(255, 177, 191, 0.855);
+      }
+      .newsletter form input[type="text"]:focus {
+        outline: 2px solid rgba(255, 0, 43, 0.855);
+      }
+      .newsletter form input[type="button"] {
+        flex-basis: 30%;
+        margin-left: 0px;
+        height: 37px;
+        border: 2px solid rgba(255, 0, 43, 0.855);
+        background-color: rgba(255, 0, 43, 0.855);
+        font-size: 18px;
+        color: #fff;
+        border-radius: 0px 40px 40px 0px;
+      }
+      .newsletter form {
+        display: flex;
+        width: 550px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px 0px 0px 20px;
+      }
+      #footer {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        height: max-content;
+        flex-direction: column;
+        align-items: center;
+        background-color: rgba(255, 0, 43, 0.855);
+            scroll-snap-align: center;
+      }
+      .footcontent {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 10px;
+        height: max-content;
+        margin: 20px 20px 0px 20px;
+        justify-content: space-around;
+      }
+      #footer .footcontent .company {
+        margin-top: 20px;
+        flex-basis: 28%;
+        padding: 10px;
+      }
+      #footer .footcontent .sociallink {
+        margin-top: 20px;
+        display: flex;
+        padding-top: 30px;
+        justify-content: center;
+        flex-basis: 10%;
+      }
+      #footer .footcontent .contact {
+        margin-top: 20px;
+        display: flex;
+        padding-top: 30px;
+        justify-content: center;
+        flex-basis: 20%;
+      }
+      #footer .footcontent .footnews {
+        margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-basis: 30%;
+        padding: 20px;
+      }
+      #footer .footcontent .footnews form {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+        justify-content: center;
+        /* height: max-content; */
+      }
+      #footer .footcontent .footnews form input[type="text"] {
+        height: 33px;
+        flex-basis: 70%;
+        margin-right: 0px;
+        border: none;
+        outline: 1px solid rgba(255, 177, 191, 0.855);
+      }
+      #footer .footcontent .footnews form input[type="button"] {
+        flex-basis: 20%;
+        margin-left: 0px;
+        margin-top: -2px;
+        height: 37px;
+        /* border: 2px solid rgba(255, 255, 255, 0.855); */
+        background-color: rgba(255, 0, 43, 0.855);
+        font-size: 12px;
+        border: none;
+        color: #fff;
+        padding: 10px;
+      }
+      #footer .footcontent ul li {
+        list-style: none;
+        padding: 6px;
+        color: #fff;
+        font-size: 18px;
+      }
+      .footcontent ul li a {
+        text-decoration: none;
+        margin-left: 10px;
+        color: #fff;
+      }
+      #footer .footcontent .company h1 {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        color: #fff;
+        margin: 0px 0px 15px 0px;
+      }
+      #footer .footcontent .company p {
+        font-size: 18px;
+        color: #fff;
+        padding: 10px;
+      }
+      #footer .footcontent .company span {
+        color: #fff;
+        font-size: 20px;
+        float: right;
+      }
+      .newsletter form input[type="text"]::placeholder {
+        font-size: 17px;
+        text-indent: 10px;
+      }
+      .footnews form input[type="text"]::placeholder {
+        font-size: 17px;
+        text-indent: 10px;
+      }
+      #footer hr {
+        width: 95%;
+        height: 4px;
+        background-color: #fff;
+        margin-bottom: 10px;
+      }
+      .footcopyright {
+        text-align: center;
+        color: #ffffff;
+        font-size: 16px;
+        margin-bottom: 10px;
+      }
+      @media screen and (max-width: 970px) {
+        #footer .footcontent .company {
+          flex-basis: 50%;
+        }
+        #footer .footcontent .sociallink {
+          flex-basis: 25%;
+        }
+        #footer .footcontent .contact {
+          flex-basis: 25%;
+        }
+        #footer .footcontent .footnews form input[type="button"] {
+          margin-top: 20px;
+        }
+        #contactus {
+          padding: 0%;
+        }
+        .myform {
+          padding: 20px;
+          flex-basis: 48%;
+        }
+      }
+      @media screen and (max-width: 912px) {
+        #footer .footcontent .company {
+          flex-basis: 70%;
+        }
+        #footer .footcontent .sociallink {
+          flex-basis: 30%;
+        }
+        #footer .footcontent .contact {
+          flex-basis: 50%;
+        }
+        #footer .footcontent .footnews {
+          flex-basis: 50%;
+        }
+        #footer .footcontent .footnews form input[type="button"] {
+          margin-top: 0px;
+        }
+        .com {
+          margin: 170px 0px 0px 20px;
+        }
+        .CService {
+          padding: 0%;
+        }
+        .ServiceBox {
+          padding: 0%;
+          flex-basis: 350px;
+        }
+        #services {
+          padding: 10px;
+        }
+        .aboutcontainer .aboutimg {
+          clip-path: none;
+          padding: 0px;
+          width: 1150px;
+          height: 300px;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+      @media screen and (max-width: 770px) {
+        #footer .footcontent .company {
+          flex-basis: 70%;
+        }
+        #footer .footcontent .sociallink {
+          flex-basis: 30%;
+        }
+        .myform {
+          max-width: 80%;
+        }
+        .com {
+          margin: 170px 0px 0px 20px;
+        }
+        .com .Cname {
+          font-size: 24px;
+        }
+        .com .Cdisc {
+          width: 250px;
+        }
+        #home {
+          height: 500px;
+        }
+        .hero img {
+          width: 450px;
+          height: 550px;
+          margin-right: -20px;
+        }
+        .CService {
+          padding: 0%;
+        }
+        .ServiceBox {
+          padding: 0%;
+          flex-basis: 220px;
+          height: 320px;
+        }
+        .servelogo i {
+          font-size: 60px;
+        }
+        .aboutcontainer {
+          flex-wrap: wrap;
+        }
+        .aboutcontainer .aboutimg {
+          height: 300px;
+          max-width: 300px;
+        }
+      }
+      @media screen and (max-width: 750px) {
+        #footer .footcontent .company {
+          flex-basis: 80%;
+        }
+        #footer .footcontent .sociallink {
+          flex-basis: 20%;
+        }
+        #footer .footcontent .contact {
+          flex-basis: 40%;
+        }
+        .formimg {
+          flex-basis: 80%;
+          margin-bottom: 20px;
+          border-right: 2px solid rgba(255, 166, 181, 0.855);
+        }
+        .myform {
+          flex-basis: 80%;
+          margin: 0px;
+          border-left: 2px solid rgba(255, 166, 181, 0.855);
+        }
+        .formcontainer {
+          padding: 0px;
+        }
+      }
+      @media screen and (max-width: 630px) {
+
+        .nav .nav-btn{
+        display: inline-block;
+        position: absolute;
+        top:0%;
+        right:0%;
+      }
+      .nav .nav-btn label{
+        display: inline-block;
+        width:60px;
+        height: 60px;
+        padding:20px;
+      }
+      .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(255, 0, 43, 0.855);
+ 
+  }
+
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid rgba(255, 0, 43, 0.855);
+  }
+    .nav-btn > label:hover > span{
+    color:#fff;
+     border-top-color: #ffffff!important;
+  }
+  .nav .nav-links{
+    position: absolute;
+    display: block;
+    top:60px;
+    left:0px;
+    width:100%;
+    height: 0%;
+    background-color: rgba(255, 0, 43, 0.855);
+    transition: all 0.5s ease-in;
+    overflow-y: hidden;
+
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 170px);
+    overflow-y: auto;
+    
+
+  }
+  .nav > #nav-check:checked ~ .nav-links> a{
+    color:#fff;
+    text-align: center;
+    text-transform: uppercase;
+  }
+        .com {
+          margin: 120px 0px 0px 120px;
+        }
+        .com .Cname {
+          font-size: 28px;
+        }
+        .com .Cdisc {
+          width: 350px;
+        }
+        #home {
+          height: 500px;
+        }
+        .hero img {
+          /* width:450px;
+        height: 550px; */
+          display: none;
+        }
+        .nav {
+          justify-content: center;
+        }
+        .CService {
+          padding: 0%;
+        }
+        .ServiceBox {
+          padding: 0%;
+          flex-basis: 350px;
+        }
+      }
+      @media screen and (max-width: 530px) {
+        #footer .footcontent .company {
+          flex-basis: 100%;
+        }
+        #footer .footcontent .sociallink {
+          justify-content: space-around;
+          flex-basis: 50%;
+        }
+        #footer .footcontent .contact {
+          flex-basis: 50%;
+        }
+        #footer .footcontent .footnews {
+          flex-basis: 100%;
+        }
+        .aboutcontainer .aboutimg {
+          clip-path: circle(40% at 50% 50%);
+        }
+        .com {
+          margin: 120px 0px 0px 70px;
+        }
+        .com .Cname {
+          font-size: 28px;
+        }
+        .com .Cdisc {
+          width: 350px;
+        }
+        .hero img {
+          /* width:450px;
+        height: 550px; */
+          display: none;
+        }
+        .nav {
+          justify-content: center;
+        }
+      }
+      @media screen and (max-width: 470px) {
+        .com {
+          margin: 120px 0px 0px 50px;
+        }
+        .com .Cname {
+          font-size: 28px;
+        }
+        .com .Cdisc {
+          width: 350px;
+        }
+        .hero img {
+          /* width:450px;
+        height: 550px; */
+          display: none;
+        }
+        .nav {
+          justify-content: center;
+        }
+      }
+
+      @media screen and (max-width: 390px) {
+        .myform {
+          flex-basis: 100%;
+          margin: 0px;
+          border-left: 2px solid rgba(255, 166, 181, 0.855);
+        }
+        .com {
+          margin: 120px 0px 0px 10px;
+        }
+        .com .Cname {
+          font-size: 28px;
+        }
+        .com .Cdisc {
+          width: 350px;
+        }
+        .hero img {
+          /* width:450px;
+        height: 550px; */
+          display: none;
+        }
+        .nav {
+          justify-content: center;
+        }
+        .servelogo {
+          margin-top: 30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading">
+      <h1>    <title>CSS_Scroll_Snapping</title>
+</h1>
+    </div>
+    <div class="nav">
+      <input type="checkbox" name="check" id="nav-check" />
+      <div class="nav-header">
+        <div class="logo">my company</div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+      <div class="nav-links">
+        <a href="#home" >Home</a>
+        <a href="#services" >Services</a>
+        <a href="#about" >About us</a>
+        <a href="#news" >NewsLetter</a>
+        <a href="#footer" >Footer</a>
+      </div>
+    </div>
+    <div id="home">
+      <div class="over-container">
+        <div class="content">
+          <div class="com">
+            <div class="Cname">
+              <h2>Company Name</h2>
+            </div>
+            <div class="Cdisc">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam,
+                cupiditate. Lorem ipsum dolor sit amet.
+              </p>
+            </div>
+            <div class="Cbtn"><a href="">Button1</a><a href="">Button2</a></div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="hero"><img src="../imgs/hero.png" alt="" /></div>
+        </div>
+      </div>
+    </div>
+    <div id="services">
+      <div class="myservice">
+        <h1>Our Services</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, ab
+          nisi. Illum in, itaque accusantium ipsum nihil, nulla veniam
+          voluptatem eos cupiditate fuga consectetur aut suscipit quod ullam
+          dolorem repellat.
+        </p>
+      </div>
+      <div class="CService">
+        <div class="ServiceBox">
+          <div class="servelogo">
+            <i class="fa-solid fa-code"></i>
+          </div>
+          <div class="servename"><h3>Service one</h3></div>
+          <div class="servedisc">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+              laudantium saepe unde. Sapiente ratione inventore soluta
+              consequatur quos optio aperiam!
+            </p>
+          </div>
+        </div>
+        <div class="ServiceBox">
+          <div class="servelogo">
+            <i class="fa-solid fa-gears"></i>
+          </div>
+          <div class="servename"><h3>Service one</h3></div>
+          <div class="servedisc">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+              laudantium saepe unde. Sapiente ratione inventore soluta
+              consequatur quos optio aperiam!
+            </p>
+          </div>
+        </div>
+        <div class="ServiceBox">
+          <div class="servelogo">
+            <i class="fa-solid fa-microchip"></i>
+          </div>
+          <div class="servename"><h3>Service one</h3></div>
+          <div class="servedisc">
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur
+              laudantium saepe unde. Sapiente ratione inventore soluta
+              consequatur quos optio aperiam!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about">
+      <div class="aboutus">
+        <div class="aboutname">
+          <h1>About us</h1>
+        </div>
+        <div class="aboutdisc">
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam
+            tempore molestias neque doloremque accusamus reiciendis distinctio,
+            perferendis deserunt pariatur consectetur corrupti nostrum, quae
+            repudiandae totam eligendi! Fugit similique sed voluptatum.
+          </p>
+        </div>
+      </div>
+      <div class="box">
+        <div class="aboutcontainer">
+          <div class="aboutimg">
+            <img src="../imgs/hero.png" alt="" />
+          </div>
+          <div class="con">
+            <div class="personename">
+              <h1>Mr Dhanush Wodeyar</h1>
+            </div>
+            <div class="aboutdisc">
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                itaque aliquid suscipit possimus a quos quaerat, eaque officiis
+                modi inventore odio iusto dolores rem consequuntur aliquam hic
+                autem sint nam porro quis quidem nobis ex maxime? Nemo ut porro
+                asperiores mollitia. Laboriosam inventore eius pariatur neque
+                alias. Reprehenderit, ipsa perspiciatis.
+              </p>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+                itaque aliquid suscipit possimus a quos quaerat, eaque officiis
+                modi inventore odio iusto dolores rem consequuntur aliquam hic
+                autem sint nam porro quis quidem nobis ex maxime? Nemo ut porro
+                asperiores mollitia. Laboriosam inventore eius pariatur neque
+                alias. Reprehenderit, ipsa perspiciatis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contactus">
+      <div class="contactheader">
+        <h1>Contact Us</h1>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae,
+          eligendi quidem vel quo odit explicabo qui officia dicta placeat
+          dignissimos ducimus ratione corrupti esse ex. Voluptatibus nobis quo
+          maiores neque?
+        </p>
+      </div>
+      <div class="formcontainer">
+        <div class="formimg">
+          <h1>Office Location</h1>
+          <div class="mapouter">
+            <div class="gmap_canvas">
+              <iframe
+                width="350"
+                height="198"
+                id="gmap_canvas"
+                src="https://maps.google.com/maps?q=india&t=k&z=4&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+              ></iframe
+              ><a href="https://2yu.co">2yu</a><br /><style>
+                .mapouter {
+                  position: relative;
+                  text-align: right;
+                  height: 198px;
+                  width: 350px;
+                }</style
+              ><a href="https://embedgooglemap.2yu.co">html embed google map</a
+              ><style>
+                .gmap_canvas {
+                  overflow: hidden;
+                  background: none !important;
+                  height: 198px;
+                  width: 350px;
+                }
+              </style>
+            </div>
+          </div>
+          <div class="socialicon">
+            <div class="icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-codepen"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-discord"></i>
+            </div>
+          </div>
+        </div>
+        <div class="myform">
+          <div class="formhead">
+            <h1>Contact Form</h1>
+          </div>
+          <form action="">
+            <input
+              type="text"
+              placeholder="First Name"
+              name="Fistname"
+              id="fname"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="Lastname"
+              id="lname"
+            />
+            <input type="email" placeholder="Email" name="Email" id="email" />
+            <textarea
+              name="message"
+              placeholder="Send a message to Us"
+              id="msg"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <input type="button" value="Send" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="news">
+      <div class="newsheader">
+        <h1>Newsletter</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates,
+          nihil. Lorem ipsum dolor sit amet.
+        </p>
+      </div>
+      <div class="newsletter">
+        <form action="">
+          <input
+            type="text"
+            placeholder="Enter your Email"
+            name="Newsletter"
+            id="NL"
+          />
+          <input type="button" value="subscribe" />
+        </form>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="footcontent">
+        <div class="company">
+          <h1>More about my Company</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam odit
+            saepe et asperiores, aliquid sed magni consequuntur excepturi autem
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur
+            illo explicabo enim esse fuga eaque quas qui dicta.
+          </p>
+          <span> -Dhanush Wodeyar </span>
+        </div>
+        <div class="sociallink">
+          <ul>
+            <li>
+              <i class="fa-brands fa-facebook-f"></i><a href="#">Facebook</a>
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i><a href="#">Whatsapp</a>
+            </li>
+            <li><i class="fa-brands fa-github"></i><a href="#">GitHub</a></li>
+            <li><i class="fa-brands fa-codepen"></i><a href="#">Codepen</a></li>
+            <li><i class="fa-brands fa-twitter"></i><a href="#">Twitter</a></li>
+            <li><i class="fa-brands fa-discord"></i><a href="#">Discord</a></li>
+          </ul>
+        </div>
+        <div class="contact">
+          <ul>
+            <li><i class="fa-solid fa-phone"></i><a href="#">7019863983</a></li>
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <a href="#">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Possimus, dolore.
+              </a>
+            </li>
+            <li><a href="#">some text</a></li>
+          </ul>
+        </div>
+        <div class="footnews">
+          <form action="">
+            <input
+              type="text"
+              placeholder="Enter your Email"
+              name="Newsletter"
+              id="NL"
+            />
+            <input type="button" value="subscribe" />
+          </form>
+          <div class="socialicon">
+            <div class="icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-github"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-codepen"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="icon">
+              <i class="fa-brands fa-discord"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="footcopyright">
+        All <i class="fa-solid fa-copyright"></i> Copy Rughts belongs to Dhanush
+        Wodeyar
+      </div>
+    </footer>
+                    <Section class="navigatebtn">
+      <a href="68.CSS_Scroll-Behaviour.html" class="previousbtn">Previous </a>
+      <a href="70.CSS_File-Selecter-Button_Pseudo-Element.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

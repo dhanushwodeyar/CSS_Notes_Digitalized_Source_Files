@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Text_Decoration_Thickness</title>
+    <style>
+        *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        .heading{
+            font-size: 60px;
+            color:white;
+            text-transform: capitalize;
+            text-align: center;
+            margin:20px;
+        }
+        hr{
+            margin:20px 10px;
+            height: 5px;
+            background-color: yellow;
+            border-radius: 20px;
+        }
+        div[class^="box"]{
+            display: flex;
+            width:300px;
+            height: 300px;
+            background-color: chocolate;
+            justify-content: center;
+            align-items: center;
+            margin:10px;
+        }
+        #main{
+            display: flex;
+            padding:10px;
+            flex-wrap: wrap;
+        }
+        .box1{
+            text-decoration-line: overline;
+            text-decoration-color: yellow;
+            text-decoration-thickness:20px;
+        }
+        .box2{
+            text-decoration-line: underline;
+            text-decoration-color: yellow;
+            text-decoration-thickness:20px;
+        }
+        .box3{
+            text-decoration-line:line-through;
+            text-decoration-color: yellow;
+            text-decoration-thickness:5px;
+        }
+        .box4{
+            text-decoration-line:none;
+            text-decoration-color: yellow;
+            text-decoration-thickness:20px;
+        }
+
+    </style>
+</head>
+<body>
+     <h1 class="heading">CSS_Text_Decoration_Thickness</h1>
+     <hr>
+     <div id="main">
+    <div class="box1">
+        <h2>Overline Thikness</h2>
+    </div>
+        <div class="box2">
+        <h2>Underline Thikness</h2>
+    </div>
+        <div class="box3">
+        <h2>Line-Through Thikness</h2>
+    </div>
+    <div class="box4">
+        <h2>None</h2>
+    </div>
+    </div>
+                <Section class="navigatebtn">
+      <a href="62.CSS Text-Underline_Offset.html" class="previousbtn">Previous </a>
+      <a href="64.CSS_Current-color Mode.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

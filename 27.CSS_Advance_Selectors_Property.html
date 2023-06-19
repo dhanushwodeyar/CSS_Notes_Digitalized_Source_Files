@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Advance_Selectors_Property</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+               
+               body{
+           background-color: black;
+       }
+       body .heading{
+           font-size: 60px;
+           text-transform: uppercase;
+           width:calc(230px*5);
+           margin: 20px auto;
+           color:#ffffff;
+       }
+       hr{
+           width:100hw;            
+           height:5px;
+           background-color: blueviolet;
+           border-radius: 30px;   
+       }
+       #head{
+        width:100hw;
+        height: 100px;
+        color:#ffffff;
+        font-size: 20px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-weight: 800;
+        text-align: center;
+        border:2px solid wheat;
+        background-color: coral;
+        margin-top: 20px;
+       }
+       .nav{
+        margin-top:0px;
+        width:100hw;
+        height: 60px;
+        background-color: aliceblue;
+       }
+       .nav>h2{
+        float:left;
+        line-height: 50px;
+        margin-left: 70px;
+        font-size: 40px;
+        color:gray;
+       }
+       .nav>ul{
+        float:right;
+        width:40%;
+       }
+
+       .nav ul>li{
+        display: inline-block;
+        margin: 20px;
+        font-size: 18px;
+        text-transform: capitalize;
+
+       }
+       li>a{
+        color:gray;
+        text-decoration: none;
+       }
+       .body{background-color: burlywood;
+        padding: 20px;
+        width:100hw;
+    height:100vw;    }
+    .body img{
+        width:300px;
+    height: 300px;
+float:left;
+clip-path: circle(40% at 50% 40%);
+shape-outside: circle(40% at 50% 40%);
+shape-margin: 30px;
+}
+.body p{
+    color:gray;
+    font-size: 22px;
+
+}
+#box1{
+    width:400px;
+    height: 300px;
+    border: 2px solid red;
+    background-color: cadetblue;
+    float:left;
+    margin:30px 15px;
+}
+#box2{
+    width:400px;
+    height: 300px;
+    border: 2px solid red;
+    background-color: cadetblue;
+    float:left;
+    margin:30px 15px;
+}
+#box3{
+    width:400px;
+    height: 300px;
+    border: 2px solid red;
+    background-color: cadetblue;
+    float:left;
+    margin:30px 15px;
+}
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Advance_Selectors_Property</h1>
+    <hr>
+    <div id="head"><h1>Website Name</h1></div>
+    <div class="nav">
+        <h2>Dhanush</h2>
+        <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Service</a></li>
+        <li><a href="#">Price</a></li>
+        <li><a href="#">SignIn</a></li>
+    </ul></div>
+    <div class="body">
+        <img src="../imgs/b9.jpg" alt="">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, quo? Quisquam molestiae labore veniam temporibus amet? Dicta officia id porro enim fugit consequatur unde libero, soluta aliquam, cupiditate esse fuga. Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum nam eveniet cupiditate sapiente unde voluptatum eaque, a sed sequi quisquam vitae, ipsam possimus ab doloribus deserunt omnis. Ex, perspiciatis! Provident?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique pariatur accusantium repudiandae dicta deserunt asperiores. Dolore, atque in! Sequi dolore optio ducimus ab sed cupiditate dolores dolor magni minima at? Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor officia fugiat, magni et libero repellat beatae sit harum obcaecati minima deleniti culpa. Ipsum distinctio totam minus facere iusto numquam soluta.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem voluptatibus, vitae, optio obcaecati similique doloribus consequuntur architecto accusamus, facere provident facilis cum voluptate suscipit. Debitis earum porro ut sapiente quas! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos rerum necessitatibus nostrum pariatur cupiditate similique molestiae maiores. Necessitatibus, vero eum temporibus molestias corporis ipsum quos reiciendis sunt explicabo harum ullam?</p>
+        <div id="box1"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repudiandae aperiam pariatur ducimus asperiores corporis. Sapiente, illo quasi doloribus quod repellat fuga quo consequuntur voluptas dolores facere aliquam quia error.</p></div>
+        <div id="box2"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repudiandae aperiam pariatur ducimus asperiores corporis. Sapiente, illo quasi doloribus quod repellat fuga quo consequuntur voluptas dolores facere aliquam quia error.</p></div>
+        <div id="box3"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repudiandae aperiam pariatur ducimus asperiores corporis. Sapiente, illo quasi doloribus quod repellat fuga quo consequuntur voluptas dolores facere aliquam quia error.</p></div>
+    </div>
+            <Section class="navigatebtn">
+      <a href="26.CSS_Border-Image_Property.html" class="previousbtn">Previous </a>
+      <a href="27.CSS_Grid_Items_Positiong.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Animation-Fill-Mode_&_Play-State</title>
+    <style>
+       body{
+           background-color: black;
+           box-sizing: border-box;
+
+       }
+       body .heading{
+           font-size: 59.5px;
+           text-transform: uppercase;
+           width:100%;
+           margin: 20px auto;
+           color:#ffffff;
+       }
+       hr{
+           width:100%;
+           height:5px;
+           background-color: blueviolet;
+           border-radius: 30px;   
+       }
+       div{
+        width:300px;
+        height: 300px;
+        border:0.1px solid wheat;
+        margin:50px;
+        font-size: 30px;
+        font-weight: 500;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+       }
+       div h2{
+        margin-top:120px;
+        text-shadow: 2px 2px 1px black;
+       }
+       .d1{
+            background-color: rgb(255, 0, 242);
+            animation: ann 8s 3s infinite ;
+            animation-fill-mode: none;
+       }
+       .d2{
+        background-color: rgb(255, 0, 0);
+            animation: ann 8s 3s infinite ;
+            animation-fill-mode:forwards;
+    }
+    .d3{
+        background-color: rgb(49, 43, 110);
+            animation: ann 8s 3s infinite ;
+            animation-fill-mode:backwards;
+    }
+    .d4{
+        background-color: rgb(129, 251, 255);
+            animation: ann 8s 3s infinite ;
+            animation-fill-mode:both;
+    }
+    h2{
+        margin-top:40px;
+        text-align: center;
+        text-transform: uppercase;
+        color: #ffffff;
+        font-size: 35px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    @keyframes ann {
+        0%{width:30%; background-color: coral;}
+        50%{width:50%; background-color: rgb(255, 80, 217);}
+        100%{width:90%; background-color: rgb(80, 255, 133);}
+    }
+    .d5{
+            background-color: rgb(128, 34, 123);
+            animation: ann 8s 3s infinite ;
+       }
+       .d5:hover{
+            animation-play-state: paused;
+       }
+       .d6{
+            background-color: rgb(26, 177, 157);
+            animation: ann 8s infinite ;
+            animation-play-state: paused;
+       }
+       .d6:hover{
+            animation-play-state: running;
+       }
+       .h{
+        width: 520px;
+        height:5px;
+           background-color: blueviolet;
+           border-radius: 30px;   
+        margin:10px auto;
+       }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Animation-Fill-Mode_&_Play-State</h1>
+    <hr class=".hline">
+    <h2>Animation_Fill_Mode</h2>
+    <hr class="h">
+    <div class="d1"><h2>none</h2></div>
+    <div class="d2"><h2>forword</h2></div>
+    <div class="d3"><h2>backward</h2></div>
+    <div class="d4"><h2>both</h2></div>
+    <h2>Animation_Play_State</h2>
+    <hr class="h">
+    <div class="d5"><h2>animation-play-state: paused;</h2></div>
+    <div class="d6"><h2></h2>animation-play-state: running;</div>
+            <Section class="navigatebtn">
+      <a href="20.CSS_Animation_Property.html" class="previousbtn">Previous </a>
+      <a href="22.CCS_Object-Fit_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>
+
+

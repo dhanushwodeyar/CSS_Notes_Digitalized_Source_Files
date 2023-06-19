@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@Media_Query</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:800px;
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        
+        h1{
+            color:white;
+            font-size: 80px;
+            font-weight: 700;
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+       
+         
+        @media screen and (max-width:1366px)
+        {
+           body{background-color: rgb(1, 48, 1);}
+        }
+        @media screen and (max-width:1024px)
+        {
+           body{background-color: rgb(48, 1, 5);}
+
+        }
+        @media screen and (max-width:900px)
+        {
+           body{background-color: rgb(4, 255, 38);}
+
+        }
+        @media screen and (max-width:480px)
+        {
+           body{background-color: rgb(205, 4, 255);}
+
+        }
+    </style>
+</head>
+<body>
+    <h2 class="heading">css @Media_Query </h2>
+    <hr>
+    <!-- <h1 class="head1">This have 1920 of viewport</h1>
+    <h1 class="head2">This have 1440 of viewport</h1>
+    <h1 class="head3">This have 1366 of viewport</h1>
+    <h1 class="head4">This have 1024 of viewport</h1>
+    <h1 class="head5">This have 700-900 of viewport</h1>
+    <h1 class="head6">This have 320-480 of viewport</h1> -->
+        <div class="navigatebtn">
+      <a href="4. CSS_Z-Index.html" class="previousbtn">Previous </a>
+      <a href="6.CSS_Table_Properties.html" class="nextbtn">Next </a>
+    </div>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>
