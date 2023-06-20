@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Resize_Property</title>
+    <style>
+        body{
+            background-color: black;
+        }
+             body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:900px;
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        #box{
+            width:50%;
+            height:400px;
+            margin:50px auto;
+            border:2px solid white;
+            background-color: rgb(43, 46, 226);     
+            overflow:auto;
+            resize: both;
+        }
+        #box p{
+            color: #ffffff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size:2rem;
+            text-transform: capitalize;
+            text-align: center;
+            margin:150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box">
+        <p>this is a resizable div. you can try it</p>
+    </div>
+        <div class="navigatebtn">
+      <a href="6.CSS_Table_Properties.html" class="previousbtn">Previous </a>
+      <a href="8.CSS_Var()_Property.html" class="nextbtn">Next </a>
+    </div>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

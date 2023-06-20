@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Shape-Outside_Property</title>
+    <style>
+        body{
+            background-color: black;
+            box-sizing: border-box;
+            color:#ffffff   
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:calc(250px*5);
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        div{
+            width: 80%;
+            height:380px;
+            border:2px solid white;
+            margin: 40px auto;
+            background-color: darksalmon;
+            
+        }
+        img{
+            width:270px;
+            height: 270px;
+            margin:20px 0px 20px 20px;
+            float:left;
+            shape-margin:30px;
+            
+        }
+        .box1 img{
+            clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            shape-outside: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+            shape-margin:30px;
+        }
+        .box2 img{
+            clip-path: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            shape-outside: polygon(0% 15%, 15% 15%, 15% 0%, 85% 0%, 85% 15%, 100% 15%, 100% 85%, 85% 85%, 85% 100%, 15% 100%, 15% 85%, 0% 85%);
+            shape-margin:30px;
+        }
+        .box3 img{
+            clip-path: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+            shape-outside: polygon(40% 0%, 40% 20%, 100% 20%, 100% 80%, 40% 80%, 40% 100%, 0% 50%);
+            shape-margin:30px;
+        }
+        .box4 img{
+            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            shape-outside: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+            shape-margin:30px;
+        }
+         p{
+            font-size: 18px;
+            font-weight: 400;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        } 
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Shape-Outside_Property</h1>
+    <hr>
+    <div class="box1"><img src="../imgs/king-lip-S9uB_IlDThw-unsplash.jpg" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis maiores odit nobis repellat totam nostrum aperiam quidem tempora. Fuga eius tenetur dolor obcaecati fugiat eveniet corrupti? Temporibus, iure nulla.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quasi, illum repellat esse, excepturi voluptatem voluptate cumque officia neque expedita necessitatibus libero? Eligendi at odio obcaecati dolorum voluptatum, accusantium animi!
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ex esse reiciendis, ullam animi cumque quibusdam ratione incidunt eius molestiae itaque, explicabo repellat quis consequuntur dolores error asperiores impedit ad.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim dolore. A cupiditate, voluptate ut ex voluptatem architecto dicta iure consectetur et itaque omnis at delectus quia reiciendis vel rerum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque ut, quo corporis quae cum praesentium incidunt minus quod voluptatem consectetur totam ex perspiciatis facere aliquid, eum dolor aspernatur commodi.
+    </p>
+    </div>
+    <div class="box2"><img src="../imgs/mulyadi-je229dO2TFE-unsplash.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis maiores odit nobis repellat totam nostrum aperiam quidem tempora. Fuga eius tenetur dolor obcaecati fugiat eveniet corrupti? Temporibus, iure nulla.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quasi, illum repellat esse, excepturi voluptatem voluptate cumque officia neque expedita necessitatibus libero? Eligendi at odio obcaecati dolorum voluptatum, accusantium animi!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ex esse reiciendis, ullam animi cumque quibusdam ratione incidunt eius molestiae itaque, explicabo repellat quis consequuntur dolores error asperiores impedit ad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim dolore. A cupiditate, voluptate ut ex voluptatem architecto dicta iure consectetur et itaque omnis at delectus quia reiciendis vel rerum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque ut, quo corporis quae cum praesentium incidunt minus quod voluptatem consectetur totam ex perspiciatis facere aliquid, eum dolor aspernatur commodi.
+        </p></div>
+    <div class="box3"><img src="../imgs/joey-nicotra-aQSPWSxCweY-unsplash (2).jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis maiores odit nobis repellat totam nostrum aperiam quidem tempora. Fuga eius tenetur dolor obcaecati fugiat eveniet corrupti? Temporibus, iure nulla.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quasi, illum repellat esse, excepturi voluptatem voluptate cumque officia neque expedita necessitatibus libero? Eligendi at odio obcaecati dolorum voluptatum, accusantium animi!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ex esse reiciendis, ullam animi cumque quibusdam ratione incidunt eius molestiae itaque, explicabo repellat quis consequuntur dolores error asperiores impedit ad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim dolore. A cupiditate, voluptate ut ex voluptatem architecto dicta iure consectetur et itaque omnis at delectus quia reiciendis vel rerum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque ut, quo corporis quae cum praesentium incidunt minus quod voluptatem consectetur totam ex perspiciatis facere aliquid, eum dolor aspernatur commodi.
+        </p></div>
+    <div class="box4"><img src="../imgs/mulyadi-MO7HNbW1Mew-unsplash.jpg" alt="">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis facilis maiores odit nobis repellat totam nostrum aperiam quidem tempora. Fuga eius tenetur dolor obcaecati fugiat eveniet corrupti? Temporibus, iure nulla.
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto quasi, illum repellat esse, excepturi voluptatem voluptate cumque officia neque expedita necessitatibus libero? Eligendi at odio obcaecati dolorum voluptatum, accusantium animi!
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ex esse reiciendis, ullam animi cumque quibusdam ratione incidunt eius molestiae itaque, explicabo repellat quis consequuntur dolores error asperiores impedit ad.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, enim dolore. A cupiditate, voluptate ut ex voluptatem architecto dicta iure consectetur et itaque omnis at delectus quia reiciendis vel rerum.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cumque ut, quo corporis quae cum praesentium incidunt minus quod voluptatem consectetur totam ex perspiciatis facere aliquid, eum dolor aspernatur commodi.
+        </p></div>
+                <Section class="navigatebtn">
+      <a href="11.CSS_Clip-Path_Property.html" class="previousbtn">Previous </a>
+      <a href="13.CSS_Filters_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

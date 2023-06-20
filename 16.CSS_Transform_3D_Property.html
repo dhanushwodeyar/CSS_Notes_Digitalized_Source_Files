@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Transform_3D_Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+            body{
+            background-color: black;
+            box-sizing: border-box;
+            color:#ffffff   
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:calc(200px*6 ) ;
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        .cont{
+            width:45%;
+            height: 450px;
+            border: 2px solid white;
+            margin:30px 30px;    
+            float:left;
+    }
+        .pic1{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: orange;
+            position:relative
+        }
+        .img1{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: right top;
+        }
+        .pic1:hover .img1{
+            transform: rotateX(90deg);
+        }
+        h2{
+            font-size: 26px;
+            font-weight: 800;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            position:absolute;
+            top:120px;
+            left:50px;
+            text-transform: capitalize;
+            color:rgb(68, 0, 255);
+            text-shadow: 1px 1px #2bff00;
+        }
+        .pic2{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img2{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: bottom right ;
+
+        }
+        .pic2:hover .img2{
+            transform: rotateY(90deg);
+        }
+        .pic3{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img3{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            
+
+        }
+        .pic3:hover .img3{
+            transform: rotateZ(180deg);
+        }
+        .pic4{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img4{
+            width:100%;
+            height: 100%;
+            transform: none; 
+            transition: all 4s ease-in-out;
+
+        }
+        .pic4:hover .img4{
+            transform: rotate3d(0, 1, 0.5, 3.142rad); 
+        }
+
+        .pic5{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img5{
+            width:100%;
+            height: 100%;
+            transform:none;  
+            transition: all 4s ease-in-out;
+            transform-origin: left bottom;
+
+        }
+        .pic5:hover .img5{
+            transform: perspective(800px) rotateX(90deg);
+        }
+
+        .pic6{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img6{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: left bottom;
+
+        }
+        .pic6:hover .img6{
+            transform:perspective(800px) rotateY(90deg);
+        }
+
+        .pic7{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img7{
+            width:100%;
+            height: 100%;
+            transform:none;  
+            transition: all 4s ease-in-out;
+            transform-origin: right center;
+
+        }
+        .pic7:hover .img7{
+            transform: perspective(800px) rotateY(-90deg);
+        }
+
+        .pic8{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img8{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: left center;
+
+        }
+        .pic8:hover .img8{
+            transform:perspective(800px) rotateY(90deg);
+        }
+        .pic9{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img9{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: bottom center;
+
+        }
+        .pic9:hover .img9{
+            transform:perspective(800px) rotateY(60deg) translateX(400px) ;
+        }
+        .pic10{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img10{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: bottom center;
+            
+        }
+        .pic10:hover .img10{
+            transform:perspective(800px) rotateY(60deg) translateX(-400px) ;
+            
+        }
+        .pic11{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img11{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: left center;
+
+
+        }
+        .pic11:hover .img11{
+            transform:perspective(800px) rotateY(-60deg) translateX(600px);
+        }
+        .pic12{
+            width:80%;
+            height: 80%;
+            border: 2px solid rgb(0, 255, 85);
+            margin: 45px auto;
+            background-color: rgb(0, 247, 255);
+            position:relative
+        }
+        .img12{
+            width:100%;
+            height: 100%;
+            transform: none;  
+            transition: all 4s ease-in-out;
+            transform-origin: left center;
+
+        }
+        .pic12:hover .img12{
+            transform:perspective(500px) rotateY(-60deg) translateZ(200px);
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Transform_3D_Property</h1>
+    <hr>
+    <div class="cont">
+        <div class="pic1">
+            <img class="img1" src="../imgs/b13.jpg" alt="">
+            <h2>transform: rotateX(90deg)</h2>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="pic2">
+            <img class="img2" src="../imgs/b2.jpg" alt="">
+            <h2>transform: rotateY(90deg)</h2>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="pic3">
+            <img class="img3" src="../imgs/b3.jpg" alt="">
+            <h2>transform: rotateZ(180deg)</h2>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="pic4">
+            <img class="img4" src="../imgs/b4.jpg" alt="">
+            <h2>transform: rotate3D(180deg)</h2>
+        </div>
+    </div>
+    
+    <div class="cont">
+        <div class="pic5">
+            <img class="img5" src="../imgs/b5.jpg" alt="">
+            <h2>transform: rotateX(90deg) with Perspective(800px)</h2>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="pic6">
+            <img class="img6" src="../imgs/b6.jpg" alt="">
+            <h2>transform: rotateY(90deg) with Perspective(800px)</h2>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="pic7">
+            <img class="img7" src="../imgs/b7.jpg" alt="">
+            <h2>transform: rotateY(90deg) with Perspective(800px)</h2>
+        </div>
+    </div>
+    <div class="cont">
+        <div class="pic8">
+            <img class="img8" src="../imgs/b8.jpg" alt="">
+            <h2>transform: rotateY(90deg) with Perspective(800px)</h2>
+        </div>
+    </div>
+<!-- translate -->
+<div class="cont">
+    <div class="pic9">
+        <img class="img9" src="../imgs/b9.jpg" alt="">
+        <h2>transform:perspective(800px) rotateY(60deg) translateX(400px)</h2>
+    </div>
+</div>
+<div class="cont">
+    <div class="pic10">
+        <img class="img10" src="../imgs/b10.jpg" alt="">
+        <h2> transform:perspective(800px) rotateY(60deg) translateX(-400px)</h2>
+    </div>
+</div>
+<div class="cont">
+    <div class="pic11">
+        <img class="img11" src="../imgs/b11.jpg" alt="">
+        <h2> transform:perspective(800px) rotateY(-60deg) translateX(600px)</h2>
+    </div>
+</div>
+<div class="cont">
+    <div class="pic12">
+        <img class="img12" src="../imgs/b12.jpg" alt="">
+        <h2>transform:perspective(500px) rotateY(-60deg) translateZ(200px)</h2>
+    </div>
+</div>
+        <Section class="navigatebtn">
+      <a href="15.CSS_Transform_2D_Property.html" class="previousbtn">Previous </a>
+      <a href="17.CSS_Perspective_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

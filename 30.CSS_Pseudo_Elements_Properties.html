@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_Pseudo_Elements_Properties</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: black;
+      }
+      body .heading {
+        font-size: 50px;
+        text-transform: uppercase;
+        width: calc(220px * 4);
+        margin: 20px auto;
+        color: #ffffff;
+      }
+      hr {
+        width: 100hw;
+        height: 5px;
+        background-color: blueviolet;
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      .card {
+        width: 95%;
+        height: fit-content;
+        background-color: antiquewhite;
+        margin: 20px;
+        padding: 20px;
+        border: 2px solid #ffffff;
+      }
+      .card p {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 20px;
+        line-height: 35px;
+        margin-left: 30px;
+      }
+      input {
+        width: 250px;
+        height: 36px;
+        margin: 40px 40%;
+      }
+      /* p:first-child::first-letter {
+        font-size: 40px;
+        color: red;
+        font-weight: bolder;
+      } */
+      p:first-child::first-letter {
+        font-size: 40px;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+      }
+      p:nth-child(2)::first-line {
+        font-size: 30px;
+        color: rgb(38, 0, 255);
+        font-weight: bolder;
+      }
+      input::placeholder {
+        color: red;
+      }
+      p:nth-child(1)::selection {
+        background-color: green;
+        color: #ffffff;
+      }
+      p:nth-child(2)::selection {
+        background-color: rgb(255, 0, 200);
+        color: #ffffff;
+      }
+      p::before {
+        content: "Befor";
+        color: #ffffff;
+        font-size: 22px;
+        padding: 6px;
+        margin: 10px;
+        background-color: rgb(29, 183, 255);
+      }
+      p::after {
+        content: attr(data-MyAttribute);
+        color: #ffffff;
+        font-size: 22px;
+        padding: 6px;
+        margin: 10px;
+        background-color: rgb(14, 109, 2);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">CSS_Pseudo-Classes_Property</h1>
+    <hr />
+    <div class="card">
+      <p data-MyAttribute="Dhanush">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+        magni et dicta numquam in magnam accusamus repellendus similique dolor
+        cupiditate! Quasi, ea delectus dolorem dolor aliquam et ut? Totam,
+        beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+        ipsam accusamus praesentium vel quod laudantium fuga earum alias
+        aspernatur! Consequatur dicta similique, ut aperiam at quis eos.
+        Doloremque, odio maiores!
+      </p>
+      <p data-MyAttribute="Sangeetha">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+        magni et dicta numquam in magnam accusamus repellendus similique dolor
+        cupiditate! Quasi, ea delectus dolorem dolor aliquam et ut? Totam,
+        beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero
+        ipsam accusamus praesentium vel quod laudantium fuga earum alias
+        aspernatur! Consequatur dicta similique, ut aperiam at quis eos.
+        Doloremque, odio maiores!
+      </p>
+      <input placeholder="::Placeholder" type="text" />
+    </div>
+            <Section class="navigatebtn">
+      <a href="29.CSS_Pseudo-Classes_Property.html" class="previousbtn">Previous </a>
+      <a href="31.CSS_Counter-Reset_and_Counter-Increment.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

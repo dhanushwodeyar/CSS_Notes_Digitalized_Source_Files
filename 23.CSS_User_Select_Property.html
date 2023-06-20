@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_User_Select_Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+           body{
+           background-color: black;
+       }
+       body .heading{
+           font-size: 65px;
+           text-transform: uppercase;
+           width:calc(200px*5);
+           margin: 20px auto;
+           color:#ffffff;
+       }
+       hr{
+           width:100%;            
+           height:5px;
+           background-color: blueviolet;
+           border-radius: 30px;   
+       }
+       div{
+        max-width:312px;
+        height: 440px;
+        background-color: rgb(255, 199, 95);
+        padding: 20px;
+        float: left;
+        margin:30px 10px;
+        font-size: 18px;
+        border:2px solid orangered
+       }
+       div h2{
+        text-align: center;
+        color:orangered;      
+          text-transform:capitalize;
+       }
+       div:hover{
+        background-color: wheat;
+        color:orangered;
+       }
+       div:hover h2{
+        color: rgb(66, 62, 62);
+       }
+       .auto{
+        user-select:auto;
+       }
+       .none{
+        user-select:none;
+       }
+       .text{
+        user-select:text;
+       }
+       .all{
+        user-select:all;
+       }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_User_Select_Property</h1>
+    <hr>
+    <div class="auto">
+        <h2>Auto</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam laudantium, corporis accusantium necessitatibus eligendi rerum non maxime impedit est hic iste ducimus quae ipsam. Odio earum deleniti eaque ab quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam soluta voluptas hic assumenda quisquam non? Sapiente a fugiat quo atque, iste aperiam illo dignissimos, temporibus fugit tenetur vitae? Voluptate? </p>
+    </div>
+    <div class="none">
+        <h2>none</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam laudantium, corporis accusantium necessitatibus eligendi rerum non maxime impedit est hic iste ducimus quae ipsam. Odio earum deleniti eaque ab quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam soluta voluptas hic assumenda quisquam non? Sapiente a fugiat quo atque, iste aperiam illo dignissimos, temporibus fugit tenetur vitae? Voluptate? </p>
+    </div>
+    <div class="text">
+        <h2>text</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam laudantium, corporis accusantium necessitatibus eligendi rerum non maxime impedit est hic iste ducimus quae ipsam. Odio earum deleniti eaque ab quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam soluta voluptas hic assumenda quisquam non? Sapiente a fugiat quo atque, iste aperiam illo dignissimos, temporibus fugit tenetur vitae? Voluptate? </p>
+    </div>
+    <div class="all">
+        <h2>all</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam laudantium, corporis accusantium necessitatibus eligendi rerum non maxime impedit est hic iste ducimus quae ipsam. Odio earum deleniti eaque ab quidem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto veniam soluta voluptas hic assumenda quisquam non? Sapiente a fugiat quo atque, iste aperiam illo dignissimos, temporibus fugit tenetur vitae? Voluptate? </p>
+    </div>
+            <Section class="navigatebtn">
+      <a href="22.CCS_Object-Fit_Property.html" class="previousbtn">Previous </a>
+      <a href="24.CSS_Box_Decoration_Break_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

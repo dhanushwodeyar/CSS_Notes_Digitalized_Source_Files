@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Flex-wrap & Flex-Flow</title>
+    <style>
+        *{
+            margin:0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        .heading{
+            color:#fff;
+            font-size: 60px;
+            text-align: center;
+            margin:20px;
+        }
+        hr{
+            height: 5px;
+            background-color: greenyellow;
+            margin: 20px 6px;
+            border-radius: 20px;
+        }
+        .con{
+            display: flex;
+            justify-content: center;
+            
+        }
+        .grid{
+            border:1px solid #fff;
+            width: 500px;
+            /* flex-direction: column; */
+            display: flex;
+            /* flex-wrap:wrap-reverse;*/
+            height: 200px; 
+            flex-flow: column wrap;
+
+        }
+        .items:nth-child(3n){
+            background-color: rgb(0, 255, 242);
+        }
+        .items:nth-last-child(3n){
+            background-color: rgb(0, 89, 255);
+        }
+        .items:not(:nth-child(3n)):not(:nth-last-child(3n)){
+            background-color: rgb(255, 136, 0);
+        }
+        .items{
+            color:#fff;
+            font-size: 20px;
+            text-align: center;
+            margin: 6px;
+            padding:4px;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Flex-wrap & Flex-Flow</h1>
+    <hr>
+    <div class="con">
+        <div class="grid">
+            <div class="items items1">First</div>
+            <div class="items items2">Second</div>
+            <div class="items items3">Third</div>
+            <div class="items items4">Fourth</div>
+            <div class="items items5">Fifth</div>
+            <div class="items items6">Sixth</div>
+            <div class="items items7">Seventh</div>
+            <div class="items items8">Eightth</div>
+            <div class="items items9">Ninth</div>
+            <div class="items items10">tenth</div>
+            <div class="items items11">Eleven</div>
+            <div class="items items12">twelth</div>
+        </div>
+    </div>
+                <Section class="navigatebtn">
+      <a href="51.CSS_Flex-Direction_Property.html" class="previousbtn">Previous </a>
+      <a href="53.CSS_Justify_content.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

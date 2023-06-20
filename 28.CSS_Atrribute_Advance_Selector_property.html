@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Atrribute_Advance_Selector_property</title>
+    <style>
+                *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+               
+               body{
+           background-color: black;
+       }
+       body .heading{
+           font-size: 50px;
+           text-transform: uppercase;
+           width:calc(260px*5);
+           margin: 20px auto;
+           color:#ffffff;
+       }
+       hr{
+           width:100hw;            
+           height:5px;
+           background-color: blueviolet;
+           border-radius: 30px;   
+       }
+       .con{
+        width:300px;
+        height: 520px;
+        border-radius: 10px;
+        background-color: rgb(255, 255, 255);
+        padding:10px;
+        margin:20px 17px;
+        float: left;
+
+      }
+      .con img{
+        width:250px;
+        height: 250px;
+        margin:12px;
+        border-radius: 10px;
+      }
+      .con h2{
+        text-align: center;
+        margin:5px;
+        color: rgb(43, 43, 43);
+        font-size: 28px;
+      }
+      .con p{
+        color: rgb(41, 41, 41);
+        font-size: 16px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      .con button{
+        color:#ffffff;
+        width:150px;
+        height: 40px;
+        background-color: brown;
+        border-radius: 5px;
+        margin: 10px 50px;
+        cursor: pointer;
+        box-shadow: 3px 3px 6px 2px black;
+      }
+      .con:hover{
+        background-color: rgb(48, 48, 175);
+      }
+      .con:hover>h2{
+        color:#ffffff;
+      }
+      .con:hover p{
+        color:#ffffff;
+      }
+      .con:hover button{
+        background-color:#ffffff;
+        color:rgb(36, 36, 184)
+      }
+      button[title]{
+        background-color: gold;
+        color:fuchsia;
+      }
+      img[src="../imgs/b12.jpg"]
+      {
+       border: 4px solid red;
+      }
+      img[alt^="image"]
+      {
+        border: 4px solid rgb(47, 0, 255);
+      }
+      img[alt|="img"]
+      {
+        border: 4px solid rgb(255, 0, 242);
+      }
+      img[alt$="lion2"]
+      {
+        border: 4px solid rgb(0, 255, 76);
+      }
+      button[value*="Here"]
+      {
+        background-color: greenyellow;
+        color:blue;
+      }
+      button[value~="enter"]
+      {
+        background-color: rgb(255, 47, 227);
+        color:blue;
+      }
+      
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Atrribute_Advance_Selector_property</h1>
+    <hr>
+    <div class="con">
+        <img src="../imgs/b12.jpg" alt="b12">
+        <h2>Dhanush</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ratione impedit quis amet minima accusamus, neque nisi quod deleniti itaque qui sunt iure quas quam soluta! Praesentium quos commodi alias.</p>
+        <button name="btn1">Enter here</button>
+    </div>
+    <div class="con">
+        <img src="../imgs/b13.jpg" alt="image of cheetha">
+        <h2>Dhanush</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ratione impedit quis amet minima accusamus, neque nisi quod deleniti itaque qui sunt iure quas quam soluta! Praesentium quos commodi alias.</p>
+        <button title="111"
+         name="btn1">Enter here</button>
+    </div>
+
+    <div class="con">
+        <img src="../imgs/b14.jpg" alt="img-of lion one">
+        <h2>Dhanush</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ratione impedit quis amet minima accusamus, neque nisi quod deleniti itaque qui sunt iure quas quam soluta! Praesentium quos commodi alias.</p>
+        <button name="btn1"  value="please enter the buttopn">Enter here</button>
+    </div>
+    
+    <div class="con">
+        <img src="../imgs/b15.jpg" alt=" pic of lion2">
+        <h2>Dhanush</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est ratione impedit quis amet minima accusamus, neque nisi quod deleniti itaque qui sunt iure quas quam soluta! Praesentium quos commodi alias.</p>
+        <button name="btn1" value="Vist Here to redirect">Enter here</button>
+    </div>
+            <Section class="navigatebtn">
+      <a href="27.CSS_Grid_Items_Positiong.html" class="previousbtn">Previous </a>
+      <a href="29.CSS_Pseudo-Classes_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

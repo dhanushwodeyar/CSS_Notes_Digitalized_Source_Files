@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Align-Self</title>
+    <style>
+        *{
+            margin: 0%;
+            padding:0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        .heading{
+            color:white;
+            font-size: 60px;
+            text-align: center;
+            margin:20px;
+        }
+        hr{
+            height: 5px;
+            background-color: green;
+            margin:20px 10px;
+            border-radius: 10px;
+        }
+        .grid{
+
+            width: max-content;
+            height: max-content;
+            display: grid;
+            grid-template-rows: repeat(2,1fr);
+            grid-template-columns:  repeat(4,1fr);
+            padding:4px;
+            margin: 10px auto;
+        }
+        .items:nth-child(2n){
+            background-color: rgb(0, 139, 70);
+            width:300px;
+            height: 300px;
+            display: flex;
+            color:#fff;
+            font-size: 20px;
+            margin:4px;
+            border: 4px double yellow;
+            
+        }
+          .items:not(:nth-child(2n)){
+            background-color: rgb(0, 60, 139);
+            width:300px;
+            height: 300px;
+            color:#fff;
+            display: flex;
+            font-size: 20px;
+            margin:4px;
+            border: 4px double yellow;
+        }
+        .items1{
+            background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self: center;
+        }
+         .items2{
+            background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:flex-start;
+         }
+         .items3{
+            background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self: flex-end;
+         }
+         .items4{
+            background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:self-start;
+         }
+         .items5{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:self-end;
+         }
+          .items6{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:baseline;
+         }
+         .items7{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:first baseline;
+         }
+        .items8{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:last baseline;
+         }
+          .items9{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:self-end;
+         }
+          .items10{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:self-start;
+         }
+          .items11{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:safe;
+         }
+         .items12{
+                background-color: red;
+            padding: 20px;
+            border:2px dotted yellow;
+            align-self:unsafe;
+         }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Align-Self</h1>
+    <hr>
+    <div class="grid">
+        <div class="items">
+            <div class="items1">Center</div>
+                    </div>
+                <div class="items">
+           <div class="items2">flex-start</div>
+        </div>
+                <div class="items">
+           <div class="items3">flex-end</div>
+        </div>
+                <div class="items">
+            <div class="items4">self-start</div>
+        </div>
+                <div class="items">
+            <div class="items5">self-end</div>
+        </div>
+                <div class="items">
+            <div class="items6">Baseline</div>
+        </div>
+           <div class="items">
+            <div class="items7">first-baseline</div>
+        </div>
+                <div class="items">
+            <div class="items8">last-baseline</div>
+        </div>
+                <div class="items">
+            <div class="items9">Self-End</div>
+        </div>
+           <div class="items">
+            <div class="items10">Self-start</div>
+        </div>
+           <div class="items">
+            <div class="items11">Safe</div>
+        </div>
+           <div class="items">
+            <div class="items12">Unsafe</div>
+        </div>
+    </div>
+            <Section class="navigatebtn">
+      <a href="54.CSS_Align-Content.html" class="previousbtn">Previous </a>
+      <a href="56.CSS_Flex_order_property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

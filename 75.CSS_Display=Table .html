@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Display=Table</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0%;
+            padding: 0%;;
+        }
+        body{
+            background-color: black;
+        }
+        h1{
+            font-size: 60px;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            color:#fff;
+        }
+        hr{
+            height: 5px;
+            margin:10px 5px;
+            background-color: yellow;
+        }
+        .table{
+            width:600px;
+            color:#fff;
+            display: table;
+            height: max-content;
+            border:2px solid yellow;
+            margin:10px auto;
+            padding:2px;
+            display: t;
+        }
+        .row{
+            display: table-row;
+            border:2px solid rgb(0, 255, 0);
+            padding:2px;
+        }
+        .col{
+
+            display: table-cell;
+            text-align: center;
+            border:2px solid orangered;
+            padding:0px;
+        }
+        .rowgroup{
+            display: table-row-group;
+            background-color: greenyellow;
+        }
+        .table-header{
+            display: table-header-group;
+            background-color: coral;
+        font-size: 30px;
+        }
+        .table-footer{
+            display: table-footer-group;
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS_Display=Table</h1>
+    <hr>
+    <div class="table">
+        <div class="table-header">
+            <div class="col">aa</div>
+            <div class="col">aa</div>
+            <div class="col">aa</div>
+        </div>
+        <div class="rowgroup">
+        <div class="row">
+            <div class="col">aa</div>
+            <div class="col">aa</div>
+            <div class="col">aa</div>
+        </div>
+        <div class="row">
+            <div class="col">aa</div>
+            <div class="col">aa</div>
+            <div class="col">aa</div>
+        </div>
+        <div class="row">
+            <div class="col">qq</div>
+            <div class="col">qq</div>
+            <div class="col">qq</div>
+        </div>
+        </div>
+        <div class="table-footer">
+            <div class="col">qq</div>
+            <div class="col">qq</div>
+             <div class="col">qq</div>
+        </div>
+    </div>
+                    <Section class="navigatebtn">
+      <a href="74.CSS_Focus -Within_Pseudo_Element.html" class="previousbtn">Previous </a>
+      <a href="76.CSS_Accent-Color.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

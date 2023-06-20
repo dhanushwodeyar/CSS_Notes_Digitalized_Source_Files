@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_Perspective_Property</title>
+    <style>
+      body {
+        background-color: black;
+        box-sizing: border-box;
+        color: #ffffff;
+      }
+      body .heading {
+        font-size: 70px;
+        text-transform: uppercase;
+        width: calc(200px * 5);
+        margin: 20px auto;
+        color: #ffffff;
+      }
+      hr {
+        width: 100%;
+        height: 5px;
+        background-color: blueviolet;
+        border-radius: 30px;
+      }
+      .base {
+        width: 600px;
+        height: 400px;
+        border: 2px solid rebeccapurple;
+        margin: 40px auto;
+        transform: none;
+        perspective: 800px;
+        perspective-origin: top center;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+        transition: all 4s ease-in-out;
+      }
+      img:hover {
+        transform: rotateX(160deg);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">CSS_Perspective_Property</h1>
+    <hr />
+    <div class="base">
+      <img src="../imgs/b16.jpg" alt="" />
+    </div>
+            <Section class="navigatebtn">
+      <a href="16.CSS_Transform_3D_Property.html" class="previousbtn">Previous </a>
+      <a href="18.CSS_Transform-Style_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

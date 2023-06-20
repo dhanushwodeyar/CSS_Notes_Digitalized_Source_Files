@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Nested_Grid</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0px;
+        }
+        body{
+            background-color: black;
+        }
+        .heading{
+            text-align: center;
+            font-size: 55px;
+            color:white;
+            margin:10px;
+        }
+        hr{
+            height: 4px;
+            background-color: greenyellow;
+            border-radius: 20px;
+            margin:20px 4px;
+        }
+        .grid1{
+            display: grid;
+            border:2px solid white;
+            max-width:500px;
+        max-height: min-content;
+        padding:2px;
+        grid-template-rows: repeat(2,100px);
+        grid-template-columns: repeat(auto-fit,minmax(100px,1fr ));
+            grid-auto-flow: row;
+            grid-auto-rows: 100px;
+            grid-gap:4px 3px;
+            margin:20px auto;
+            
+    
+    }
+    .items1{
+        background-color: red;
+    }
+        .items2{
+        background-color: rgb(9, 255, 0);
+    }
+        .items3{
+        background-color:transparent;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        grid-gap:4px 3px;
+       
+    }
+        .items4{
+        background-color: rgb(0, 204, 255);
+    }
+    .it1{
+        background-color: silver;
+         border:1px solid #fff;
+    }
+        .it2{
+        background-color: rgb(2, 15, 255);
+         border:1px solid #fff;
+    }
+        .it3{
+        background-color: rgb(255, 6, 159);
+         border:1px solid #fff;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Nested_Grid</h1>
+    <hr>
+    <div class="grid1">
+        <div class="items1">First</div>
+        <div class="items2">Second</div>
+        <div class="items3">
+            <div class="it1"></div>
+            <div class="it2"></div>
+            <div class="it3"></div>
+        </div>
+        <div class="items4">Fourth</div>
+       
+    </div>
+                <Section class="navigatebtn">
+      <a href="47.CSS_Grid_Order_Property.html" class="previousbtn">Previous </a>
+      <a href="49.CSS_Grid overlapping.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Curser_Property</title>
+    <style>
+        :root{
+            --e:rgb(102, 255, 0);
+            --o:rgb(238, 161, 19);
+        }
+        body{
+            background-color: black;
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:800px;
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+        }
+        div:nth-child(even){
+            width:200px;
+            height: 200px;
+            border:2px solid var(--o);
+            background-color: var(--e);
+            display: inline;
+            float:left;
+            margin:30px 30px;
+            color:white;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+            }
+            div:nth-child(odd){
+            width:200px;
+            height: 200px;
+            border:2px solid var(--e);
+            background-color: var(--o);
+            display: inline;
+            float:left;
+            margin:30px 30px;
+            color:white;
+            text-transform: capitalize;
+            text-align: center;
+            font-size: 30px;
+            font-weight: 600;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            }
+            div:nth-child(odd):hover{
+            background-color: rgb(217, 238, 25);
+            }
+            div:nth-child(even):hover{
+            background-color: rgb(238, 19, 227);
+            }
+            #box1{
+                cursor:auto;
+            }
+            #box2{
+                cursor:default;
+            }
+            #box3{
+                cursor:none;
+            }
+            #box4{
+                cursor: context-menu;
+            }
+            #box5{
+                cursor:help;
+            }
+            #box6{
+                cursor:pointer;
+            }
+            #box7{
+                cursor: progress;
+            }
+            #box8{
+                cursor: wait;
+            }
+            #box9{
+                cursor: cell;
+            }
+            #box10{
+                cursor: crosshair;
+            }
+            #box11{
+                cursor: text;
+            }
+            #box12{
+                cursor: vertical-text;
+            }
+            #box13{
+                cursor: alias;
+            }
+            #box14{
+                cursor: copy;
+            }
+            #box15{
+                cursor: move;
+            }
+            #box16{
+                cursor: no-drop;
+            }
+            #box17{
+                cursor: not-allowed;
+            }
+            #box18{
+                cursor: e-resize;
+            }
+            #box19{
+                cursor: n-resize;
+            }
+            #box20{
+                cursor: ne-resize;
+            }
+            #box21{
+                cursor: nw-resize;
+            }
+            #box22{
+                cursor: s-resize;
+            }
+            #box23{
+                cursor: se-resize;
+            }
+            #box24{
+                cursor: sw-resize;
+            }
+            #box25{
+                cursor: w-resize;
+            }
+            #box26{
+                cursor: ew-resize;
+            }
+            #box27{
+                cursor: ns-resize;
+            }
+            #box28{
+                cursor: nesw-resize;
+            }
+            #box29{
+                cursor:nwse-resize;
+            }
+            #box30{
+                cursor: col-resize;
+            }
+            #box31{
+                cursor: row-resize;
+            }
+            #box32{
+                cursor: all-scroll;
+            }
+            #box33{
+                cursor: zoom-in;
+            }
+            #box34{
+                cursor: zoom-out;
+            }
+            #box35{
+                cursor: grab;
+            }
+            #box36{
+                cursor: grabbing;
+            }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Curser_Property</h1>
+    <hr>
+    <div id="box1">auto</div>
+    <div id="box2">default</div>
+    <div id="box3">none</div>
+    <div id="box4">context-menu</div>
+    <div id="box5">help</div>
+    <div id="box6">pointer</div>
+    <div id="box7">progress</div>
+    <div id="box8">wait</div>
+    <div id="box9">cell</div>
+    <div id="box10">crosshair</div>
+    <div id="box11">text</div>
+    <div id="box12">vertical-text</div>
+    <div id="box13">alias</div>
+    <div id="box14">copy</div>
+    <div id="box15">move</div>
+    <div id="box16">no-drop</div>
+    <div id="box17">not-allowed</div>
+    <div id="box18">e-resize</div>
+    <div id="box19">n-resize</div>
+    <div id="box20">ne-resize</div>
+    <div id="box21">nw-resize</div>
+    <div id="box22">s-resize</div>
+    <div id="box23">se-resize</div>
+    <div id="box24">sw-resize</div>
+    <div id="box25">w-resize</div>
+    <div id="box26">ew-resize</div>
+    <div id="box27">ns-resize</div>
+    <div id="box28">nesw-resize</div>
+    <div id="box29">nese-resize</div>
+    <div id="box30">col-resize</div>
+    <div id="box31">row-resize</div>
+    <div id="box32">all-scroll</div>
+    <div id="box33">zoom-in</div>
+    <div id="box34">zoom-out</div>
+    <div id="box35">grab</div>
+    <div id="box36">grabbing</div>
+        <Section class="navigatebtn">
+      <a href="8.CSS_Var()_Property.html" class="previousbtn">Previous </a>
+      <a href="10.CSS_Calc( )_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

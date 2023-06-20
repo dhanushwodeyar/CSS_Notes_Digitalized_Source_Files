@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_Naming_a_Grid_Areas</title>
+    <style>
+      @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css";
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+      body .heading {
+        font-size: 50px;
+        text-transform: uppercase;
+        width: calc(200px * 3);
+        margin: 20px auto;
+        color: rgb(255, 255, 255);
+      }
+      hr {
+        width: 100hw;
+        height: 5px;
+        background-color: rgb(43, 226, 67);
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      #grid {
+        min-height: 500px;
+        border: 2px solid white;
+        margin: 20px;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.5fr;
+        grid-template-rows: 100px 70px 60px 500px 70px;
+        grid-gap: 5px 5px;
+        background-color: aliceblue;
+        grid-template-areas:
+          "header header header"
+           "nav nav nav"
+          "data1 data2 side"
+          "data3 data3 side"
+          "data3 data3 side"
+          "footer footer footer";
+        border-radius: 20px;
+      }
+      .headings {
+        background-color: red;
+        grid-area: header;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: black;
+        line-height: 50px;
+      }
+      .nav {
+        background-color: chartreuse;
+        grid-area: nav;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: rgb(0, 0, 0);
+        line-height: 50px;
+      }
+      .con1 {
+        background-color: palevioletred;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: black;
+        line-height: 50px;
+        grid-area: data1;
+      }
+      .con2 {
+        background-color: rgb(255, 0, 85);
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: black;
+        line-height: 50px;
+        grid-area: data2;
+      }
+      .con3 {
+        background-color: aqua;
+        grid-area: data3;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        line-height: 300px;
+        color: black;
+      }
+      .side {
+        background-color: darksalmon;
+        grid-row: side;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: rgb(0, 1, 5);
+        line-height: 500px;
+      }
+      .foot {
+        background-color: green;
+        grid-area: footer;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 25px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        color: black;
+        line-height: 50px;
+      }
+      i {
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">CSS_Naming_a_Grid_Areas</h1>
+    <hr />
+    <div id="grid">
+      <div class="headings">
+        <i class="fa-solid fa-building"></i> Your Company name
+      </div>
+      <div class="nav"><i class="fa-solid fa-bars"></i> Navbar</div>
+      <div class="con1"><i class="fa-solid fa-database"></i> Data 1</div>
+      <div class="con2"><i class="fa-solid fa-database"></i> Data 2</div>
+      <div class="con3"><i class="fa-solid fa-database"></i> Data 3</div>
+      <div class="side">
+        <i class="fa-solid fa-arrow-up-wide-short"></i> Side bar
+      </div>
+      <div class="foot"><i class="fa-solid fa-shoe-prints"></i> footer</div>
+    </div>
+                <Section class="navigatebtn">
+      <a href="39.CSS_Naming_a_Grid_Lines.html" class="previousbtn">Previous </a>
+      <a href="41.CSS_MinMax()_Function.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

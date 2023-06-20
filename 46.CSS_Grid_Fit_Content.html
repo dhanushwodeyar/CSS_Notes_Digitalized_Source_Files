@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS_Grid_Fit_Content</title>
+    <style>
+      @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css";
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+
+      body {
+        background-color: rgb(0, 0, 0);
+      }
+      body .heading {
+        font-size: 50px;
+        text-transform: uppercase;
+        width: calc(200px * 5);
+        margin: 20px auto;
+        color: #ffffff;
+      }
+      hr {
+        width: 100hw;
+        height: 5px;
+        background-color: rgb(43, 226, 67);
+        border-radius: 30px;
+        margin-bottom: 20px;
+      }
+      .cont {
+        display: grid;
+        margin: 20px auto;
+        max-width: 80%;
+        background-color: burlywood;
+        border: 2px solid white;
+        grid-template-columns: fit-content(200px) fit-content(300px) 1fr;
+        grid-template-rows: repeat(2, minmax(100px, min-content));
+        grid-auto-rows: 100px;
+      }
+      .items1 {
+        background-color: chartreuse;
+        padding: 10px;
+      }
+      .items2 {
+        background-color: rgb(255, 0, 217);
+        padding: 10px;
+      }
+      .items3 {
+        background-color: rgb(255, 115, 0);
+        padding: 10px;
+      }
+      .items4 {
+        background-color: rgb(255, 0, 0);
+        padding: 10px;
+      }
+      .items5 {
+        background-color: rgb(17, 0, 175);
+        padding: 10px;
+      }
+      .items6 {
+        background-color: rgb(0, 255, 162);
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="heading">CSS_Grid_Fit_Content</h1>
+    <hr />
+    <div class="cont">
+      <div class="items1">
+        first Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+        vitae sapiente exercitationem molestiae consectetur a asperiores rerum
+        at, perferendis aspernatur eveniet, nam, vel saepe? Quidem, corrupti,
+        adipisci quas illo, necessitatibus modi culpa sint voluptate nemo ipsa
+        rerum? Non odio porro soluta. Nesciunt fugit nemo eum nobis nulla dolor
+        consequatur deleniti delectus debitis possimus. Deleniti hic dolore
+        eligendi. Explicabo similique ut quis mollitia! Adipisci, impedit
+        recusandae sapiente quas quisquam exercitationem similique error quos,
+        harum quia accusantium minima sequi porro rerum aliquid expedita
+        laudantium assumenda voluptate eos earum! Repellendus, temporibus
+        pariatur distinctio numquam molestias quas quibusdam, officiis adipisci,
+        iure in quasi omnis.
+      </div>
+      <div class="items2">
+        second Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam,
+        facilis velit fugiat maiores rem necessitatibus eaque quos laboriosam
+        consequuntur minus harum pariatur cum officiis iste eius illo delectus
+        aliquid quia reprehenderit itaque eos et sint? Temporibus, quasi
+        veritatis voluptate autem ab nisi cupiditate nesciunt quisquam,
+        perspiciatis pariatur repellat voluptatibus sint!
+      </div>
+      <div class="items3">third</div>
+      <div class="items4">fourth</div>
+      <div class="items5">fifth</div>
+      <div class="items6">
+        sixth Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Exercitationem fuga, similique iste, neque tempora consequuntur mollitia
+        nesciunt quas nobis cumque laborum! Blanditiis incidunt alias saepe
+        magni laboriosam quis adipisci asperiores, consequatur eaque quasi
+        commodi eius perspiciatis rem qui delectus sequi? Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Reprehenderit magni illo repellendus
+        est facilis nam iusto, vero harum exercitationem sunt dolor accusamus
+        temporibus, similique porro consequuntur quam rem laborum incidunt
+        voluptas commodi. Vel modi dolores quasi. Debitis quos officiis vel.
+      </div>
+    </div>
+                <Section class="navigatebtn">
+      <a href="45.CSS_Grid_Auto-Fill_and_Auto-Fit.html" class="previousbtn">Previous </a>
+      <a href="47.CSS_Grid_Order_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>

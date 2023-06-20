@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Backdrop-Filtter</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin:0%;
+            padding:0%;
+        }
+        body{
+            background-color: black;
+        }
+        h1{
+            font-size: 60px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color:rgb(255, 255, 255);
+            text-align: center;
+            margin:20px;
+        }
+        hr{
+            height: 5px;
+            background-color: greenyellow;
+            margin:10px;
+            border-radius: 4px;
+        }
+        .box{
+            width:100%;
+            display: flex;
+            height: 500px;
+        }
+        .imgdiv{
+            display: flex;
+            width: 95%;
+            flex-wrap: wrap;
+            padding:20px;
+            height: 450px;
+            background-image:url(../imgs/b12.jpg) ;
+            background-size: 100%;
+            border: 2px solid #fff;
+        margin:auto;      
+      }
+      .centerdiv{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        color: #fff700;
+        font-weight: 800;
+        flex-basis:200px;
+        height: 200px;
+        border:2px solid #fff;
+        margin:3px;
+        font-size: 20px;
+      }
+      .centerdiv:nth-child(1){
+        backdrop-filter:blur(10px);
+      }
+            .centerdiv:nth-child(2){
+        backdrop-filter:brightness(500%);
+        color:rgb(255, 0, 0);
+      }
+            .centerdiv:nth-child(3){
+        backdrop-filter:contrast(490%);
+      }
+      .centerdiv:nth-child(4){
+        backdrop-filter:10px 10px 5px red;
+      }
+      .centerdiv:nth-child(5){
+        backdrop-filter:grayscale(1);
+      }
+       .centerdiv:nth-child(6){
+        backdrop-filter:hue-rotate(280deg);
+      }
+        .centerdiv:nth-child(7){
+        backdrop-filter:invert(80%);
+      }
+       .centerdiv:nth-child(8){
+        background-image: url(../imgs/b12.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        backdrop-filter:opacity(95%);
+      }
+        .centerdiv:nth-child(9){
+        backdrop-filter:sepia(180%);
+      }
+    .centerdiv:nth-child(10){
+        backdrop-filter:saturate(600%);
+      }
+     .centerdiv:nth-child(11){
+        backdrop-filter:none;
+      }
+
+    </style>
+</head>
+<body>
+    <h1>CSS_Backdrop-Filtter</h1>
+    <hr>
+    <div class="box">
+        <div class="imgdiv">
+            <div class="centerdiv"><h3>Blur</h3></div>
+            <div class="centerdiv"><h3>Brightness</h3></div>
+            <div class="centerdiv"><h3>Contrast</h3></div>
+            <div class="centerdiv"><h3>Drop shadow</h3></div>
+            <div class="centerdiv"><h3>Grayscale</h3></div>
+            <div class="centerdiv"><h3>hue-rotate</h3></div>
+            <div class="centerdiv"><h3>invert</h3></div>
+            <div class="centerdiv"><h3>opacity</h3></div>
+            <div class="centerdiv"><h3>Sepia</h3></div>
+            <div class="centerdiv"><h3>saturate</h3></div>
+            <div class="centerdiv"><h3>none</h3></div>
+            
+        </div>
+    </div>
+                    <Section class="navigatebtn">
+      <a href="70.CSS_File-Selecter-Button_Pseudo-Element.html" class="previousbtn">Previous </a>
+      <a href="72.CSS_IS-Pseudo-Class.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

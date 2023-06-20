@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_Transform_2D_Property</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+            body{
+            background-color: black;
+            box-sizing: border-box;
+            color:#ffffff   
+        }
+        body .heading{
+            font-size: 70px;
+            text-transform: uppercase;
+            width:calc(200px*6 ) ;
+            margin: 20px auto;
+            color:#ffffff;
+        }
+        hr{
+            width:100%;
+            height:5px;
+            background-color: blueviolet;
+            border-radius: 30px;
+           
+        }
+        .box2{
+            width:350px;
+            height:350px;
+            border:2px solid white;
+            margin:70px 120Px;
+            float:left;
+            position:relative;
+            transform: skew(10deg);
+            transform-origin: left bottom;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .box1{
+            width:350px;
+            height:350px;
+            border:2px solid white;
+            margin:70px 100Px;
+            float:left;
+            position:relative;
+            transform: rotate(10deg);
+            transform-origin: left bottom;
+            
+        }
+        .over{
+            width:0%;
+            position:absolute;
+            top:0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            background-color: rgb(0, 217, 255);
+            text-align: center;
+            opacity: 0;
+            transition:opacity,width 3s ease-in-out;
+
+        }
+        .content{    
+            margin-top: 40%;
+            width:100px;
+        }
+        .box1:hover .over{
+                opacity: 0.6;
+                width: 100%;
+        }
+        .over1{
+            width:0%;
+            position:absolute;
+            top:0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            background-color: rgb(0, 255, 76);
+            text-align: center;
+            opacity: 0;
+            transition:opacity,width 3s ease-in-out;
+
+        }
+        .box2:hover .over1{
+                opacity: 0.6;
+                width: 100%;
+        }
+        .cont{
+            width:45%;
+            height:500px;
+            border:2px solid white;
+            margin:20px;
+            float:left; 
+
+        }
+        .box3{
+            width:350px;
+            height:350px;
+            border:2px solid white;
+            margin:70px 120Px;
+            float:left;
+            position:relative;
+            transform: translate(20px,20px);
+            
+        }
+        .over3{
+            width:0%;
+            position:absolute;
+            top:0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            background-color: rgb(0, 255, 76);
+            text-align: center;
+            opacity: 0;
+            transition:opacity,width 3s ease-in-out;
+
+        }
+        .box3:hover .over3{
+                opacity: 0.6;
+                width: 100%;
+        }
+        .box4{
+            width:350px;
+            height:350px;
+            border:2px solid white;
+            margin:70px 120Px;
+            float:left;
+            position:relative;
+            
+        }
+        .box4:hover{
+            transform: scale(1.7,1.4);
+        }
+        .over4{
+            width:0%;
+            position:absolute;
+            top:0%;
+            bottom: 0%;
+            left: 0%;
+            right: 0%;
+            background-color: rgb(0, 255, 76);
+            text-align: center;
+            opacity: 0;
+            transition:opacity,width 3s ease-in-out;
+
+        }
+        .box4:hover .over4{
+                opacity: 0.6;
+                width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">CSS_Transform_2D_Property</h1>
+    <hr>
+    <div class="cont">
+    <div class="box1">
+        <img src="../imgs/b2.jpg" alt="">
+        <div class="over">
+            <div class="content">
+                <h1>Rotate() _property</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cont">
+    <div class="box2">
+        <img src="../imgs/b10.jpg" alt="">
+        <div class="over1">
+            <div class="content">
+                <h1>Skew()_property</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cont">
+    <div class="box3">
+        <img src="../imgs/b12.jpg" alt="">
+        <div class="over3">
+            <div class="content">
+                <h1>Translate(X,Y)_property</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cont">
+    <div class="box4">
+        <img src="../imgs/b15.jpg" alt="">
+        <div class="over4">
+            <div class="content">
+                <h1>Scale(X,Y)_property</h1>
+            </div>
+        </div>
+    </div>
+</div>
+            <Section class="navigatebtn">
+      <a href="14.CSS_Transition_property.html" class="previousbtn">Previous </a>
+      <a href="16.CSS_Transform_3D_Property.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+</body>
+</html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>82.CSS_Orientation_Media-Rule</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0%;
+        padding: 0%;
+      }
+      body {
+        background-color: rgb(101, 160, 255);
+      }
+      h1 {
+        text-align: center;
+        color: #fff;
+        font-size: 60px;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 20px;
+      }
+      hr {
+        margin: 10px 5px;
+        height: 5px;
+        background-color: gold;
+      }
+      .box1 {
+        position: relative;
+        width: 420px;
+        height: 360px !important;
+        border: 2px solid #fff;
+        padding: 20px;
+        margin: 30px auto;
+        background-color: #fff;
+        border-radius: 20px;
+      }
+      img {
+        width: 100%;
+        height: min-content;
+        margin-top: 20px;
+      }
+      .box1 h2 {
+        position: absolute;
+        top: 135px;
+        left: 82px;
+        font-size: 40px;
+        text-transform: uppercase;
+      }
+      .box2 {
+        position: relative;
+        width: 420px;
+        height: 768px;
+        border: 2px solid #fff;
+        /* padding:20px; */
+        margin: 0px auto;
+        background-color: #ffcbcb;
+        border-radius: 60px;
+      }
+      .box2 img {
+        position: absolute;
+        left: -85%;
+        top: -11%;
+        width: 270%;
+      }
+      .box2 h2 {
+        position: absolute;
+        top: 50%;
+        left: 34%;
+        font-size: 40px;
+      }
+      .over {
+        position: absolute;
+        top: 110px;
+        left: 51px;
+        background-color: rgba(255, 0, 0, 0.613);
+        width: 310px;
+        height: 549px;
+        border-radius: 3px;
+      }
+      .over1 {
+        background-color: rgba(137, 43, 226, 0.595);
+        width: 346px;
+        height: 198px;
+        position: absolute;
+        left: 35px;
+        top: 53px;
+      }
+      @media (orientation: landscape) {
+        body {
+          background-color: rgba(220, 20, 60, 0.864);
+        }
+        .box2 {
+          display: none;
+        }
+      }
+      @media (orientation: portrait) {
+        body {
+          background-color: rgba(20, 220, 137, 0.864);
+        }
+        .box1 {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS_Orientation_Media-Rule</h1>
+    <hr />
+        <div class="text">
+      <h1>Please Shift to landscape to portrait to see the diffrence</h1>
+    </div>
+    <div class="box1">
+      <img src="../imgs/29367-3-apple-mac-computer-screen.png" alt="" />
+      <h2>Landscape</h2>
+      <div class="over1"></div>
+    </div>
+    <div class="box2">
+      <img
+        src="../imgs/68671-android-white-iphone-telephone-free-transparent-image-hq.png"
+        alt=""
+      />
+      <h2>Portrait</h2>
+      <div class="over"></div>
+    </div>
+                <Section class="navigatebtn">
+      <a href="81.CSS_Min(),Max(),Clamp().html" class="previousbtn">Previous </a>
+      <a href="83.CSS_has()-In_CSS.html" class="nextbtn">Next </a>
+    </Section>
+    <style>
+      .nextbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .nextbtn::after {
+        content: "\25BA";
+      }
+      .previousbtn {
+        width: 120px;
+        height: 40px;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: crimson;
+        text-align: center;
+        padding-top: 10px;
+        font-weight: 800px;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .previousbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+            .nextbtn:hover{
+        background-color: rgb(184, 0, 37);
+      }
+      .previousbtn::before {
+        content: "\25C0";
+        margin-right: 8px;
+      }
+      .navigatebtn {
+        display: flex;
+        width: 98%;
+
+        margin: 40px auto 10px auto;
+        height: fit-content;
+        box-sizing: border-box;
+        padding: 10px;
+        justify-content: space-between;
+      }
+    </style>
+  </body>
+</html>
